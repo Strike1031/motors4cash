@@ -1,7 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 
 export const VehicleContext = createContext();
-export const backendUrl = "http://localhost:5000";
+
+export const backendUrl = process.env.BACKEND_LINK;
+// export const backendUrl = "http://localhost:5000";
 
 const VehicleContextProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(false);
