@@ -1,6 +1,6 @@
-import React, { useContext, useState, useRef, useEffect } from 'react';
-import { Card, Button, InputGroup, Form, Row, Col, Image, Carousel } from 'react-bootstrap';
-import { DateIcon, MailLineIcon, MapIcon } from '../assets';
+import React, { useContext, useState, useRef } from 'react';
+import { Card, Button, InputGroup, Form, Row, Col, Image } from 'react-bootstrap';
+import { DateIcon, MapIcon } from '../assets';
 import { useNavigate } from 'react-router-dom';
 import { VehicleContext } from '../context/context';
 import BookPage from '../pages/BookPage';

@@ -24,7 +24,7 @@ export function DefaultHeader() {
                 </Container>
             </Navbar>
             {
-                id == 1 ? (
+                id == 1 && vehicleNumber ? (
                     <Container className="pb-5">
                         <Row className="align-items-center">
                             <Col sm={12} md={2} lg={1} className="text-center mb-2"><Image src={_model} width="90" /></Col>

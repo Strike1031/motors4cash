@@ -32,9 +32,7 @@ export default function BookPage() {
         zone,
         component,
         fault,
-        email,
-        postCode,
-        phone,
+
         appointmentPlace,
         appointmentDate,
         appointmentTime,
