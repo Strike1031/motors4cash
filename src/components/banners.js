@@ -11,9 +11,9 @@ export const PostCodeBanner = () => {
                     {/* <Col sm={12} lg={4} className="mb-2">
                         <Form.Control id="postcode" placeholder="Enter your Postcode" />
                     </Col> */}
-                    <Col sm={12} lg={2} className="mb-2">
+                    {/* <Col sm={12} lg={2} className="mb-2">
                         <Button className="postcode-submit px-4 w-100">Find Branch</Button>
-                    </Col>
+                    </Col> */}
                 </Row>
             </Container>
         </div>

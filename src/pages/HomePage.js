@@ -28,27 +28,10 @@ function HomePage() {
           <section className="BuySection py-5">
             <Container>
               <Row className="align-items-center mb-5">
-                <Col sm={12} lg={7} className="mb-2">
-                  <Image src={WomanBanner} width="100%" className="rounded rouneded-2" />
+                <Col sm={12} lg={12} className="mb-2 text-center">
+                  <Image src={WomanBanner} width="50%" className="rounded rouneded-2" />
                 </Col>
-                <Col sm={12} lg={5} className="mb-2">
-                  <div className="Banner-title  text-uppercase text-center text-lg-start">Buy my car for cash</div>
-                  <div className="Banner-content ">Simply enter your reg number to get your instant valuation for free and sell your car without the hassle.</div>
-                  {/* <Nav.Link href="#mainsection" className="nav-link"> */}
-                  <div>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                      <Form.Label>Enter Reg</Form.Label>
-                      <Nav.Link href="#mainsection" className="nav-link">
-                        <Row className="bg-white px-0 rounded rounded-1">
-                          <Col sm={2} className="bg-yellow rounded rounded-1"><InputGroup.Text id="basic-addon1"><Image src={EditIcon} width="25" /></InputGroup.Text></Col>
-                          <Col sm={8}><Button className="w-75 bg-white border text-start text-main-black-50 border-0 w-100 text rounded rounded-0 h-100">eg.<strong>N4SXE</strong></Button></Col>
-                          <Col sm={2}><Image src={CheckboxIcon} height="65" /></Col>
-                        </Row>
-                      </Nav.Link>
-                    </Form.Group>
-                  {/* </Nav.Link> */}
-                  </div>
-                </Col>
+
               </Row>
               <Row>
                 <Col sm={12} lg={4} className="mb-4">
@@ -141,51 +124,34 @@ function HomePage() {
               <div className="Section-title text-uppercase text-center mt-5 py-5" id="Faqsection">Frequently asked questions</div>
               <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
-                  <Accordion.Header><Image src={FaqIcon} width="25" className="me-3" />Accordion Item #1</Accordion.Header>
+                  <Accordion.Header><Image src={FaqIcon} width="25" className="me-3" />Do you settle finances?</Accordion.Header>
                   <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    No
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
-                  <Accordion.Header><Image src={FaqIcon} width="25" className="me-3" />Accordion Item #2</Accordion.Header>
+                  <Accordion.Header><Image src={FaqIcon} width="25" className="me-3" />When will i receive payment for my motor?</Accordion.Header>
                   <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    When we collect the motor, payment will be with you within 30 minutes
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
-                  <Accordion.Header><Image src={FaqIcon} width="25" className="me-3" />Accordion Item #2</Accordion.Header>
+                  <Accordion.Header><Image src={FaqIcon} width="25" className="me-3" />Will you collect my motor?</Accordion.Header>
                   <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    Yes, we will collect the motor within the agreed timeslot
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
-                  <Accordion.Header><Image src={FaqIcon} width="25" className="me-3" />Accordion Item #2</Accordion.Header>
+                  <Accordion.Header><Image src={FaqIcon} width="25" className="me-3" />Do you purchase motorbikes?</Accordion.Header>
                   <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    Do you purchase motorbikes?
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="4">
+                  <Accordion.Header><Image src={FaqIcon} width="25" className="me-3" />My motor is damaged will you still buy it?</Accordion.Header>
+                  <Accordion.Body>
+                    Yes, we buy damaged and cars in need of repair.
+                    We do recommend that you declare any faults or damage as they may affect your final valuation.
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>

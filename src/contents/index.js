@@ -15,17 +15,17 @@ export const FooterNavs = {
 export const WorkflowItemList = [
     {
         image : WorkflowBanner1,
-        title : "1. Free valuation",
+        title : "Free valuation",
         subtitle : "Get your instant valuation in seconds."
     },
     {
         image : WorkflowBanner2,
-        title : "2. Book an appointment",
-        subtitle : "Book an appointment at your address at your convenience."
+        title : "Book an appointment",
+        subtitle : "Once we have reviewed you valuation we will request a timeslot."
     },
     {
         image : WorkflowBanner3,
-        title : "3. Sell your car",
-        subtitle : "we'll buy and collect your car under an hour."
+        title : "Collection",
+        subtitle : "We’ll buy and collect your vehicle within the agreed timeslot."
     },
 ]
