@@ -1,0 +1,808 @@
+/* Header Style */
+.Header {
+    background-image: url(./assets/images/banners/header-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Header .nav-link {
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: white;
+    margin-left: 50px;
+}
+
+.Header .nav-link:hover,
+.Header .nav-link:focus,
+.Header .nav-link.active {
+    color: var(--main-color-yellow) !important;
+}
+
+.Header .responsive-navbar-nav {
+    background: var(--main-color-yellow) !important;
+}
+
+.Header .model-badge {
+    font-size: 16px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: black;
+    padding: 0.15rem 1rem;
+}
+
+.Header .model-info .model-name {
+    font-size: 36px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: var(--main-color-yellow);
+    margin-bottom: 10px;
+}
+
+.Header .model-info ul li {
+    color: white;
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: 500;
+    margin-right: 2rem;
+}
+
+/* Header Style */
+
+/* Main Section Style */
+.MainSection {
+    background-image: url(./assets/images/banners/bg-0.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Main Section Style */
+
+/* FormCard Style */
+.FormCard .form-label {
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: var(--main-color-black-50);
+    margin-bottom: 5px;
+}
+
+.FormCard .input-group {
+    border: none;
+}
+
+.FormCard .input-group-text:first-child {
+    padding: 1.15rem;
+    background: #BCB9B9;
+    border: none;
+    border-radius: 5px;
+}
+
+.FormCard .input-group>.form-control {
+    border: none;
+    font-size: 20px;
+    font-family: Outfit;
+}
+
+.FormCard .input-group>.form-control:focus {
+    box-shadow: none;
+}
+
+.FormCard .input-group>.form-control::placeholder {
+    color: var(--main-color-black-75);
+}
+
+.FormCard .ValueCar-submit {
+    background: var(--main-color-black-50);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    height: 60px;
+    text-align: center;
+    margin-top: 64px;
+}
+
+.FormCard .ValueCar-submit:hover {
+    background: var(--main-color-black-75);
+}
+
+/* FormCard Style */
+
+/* Buy Section Style */
+.BuySection {
+    background-image: url(./assets/images/banners/bg-3.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.BuySection .Banner-title {
+    font-size: 36px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+
+}
+
+.BuySection .Banner-content {
+    font-size: 20px;
+    font-family: RobotoRegular;
+    color: white;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.BuySection .form-label {
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: var(--main-color-yellow);
+    margin-bottom: 5px;
+}
+
+.BuySection .input-group {
+    border: none;
+}
+
+.BuySection .input-group-text:first-child {
+    padding: 1.15rem;
+    background: var(--main-color-yellow);
+    border: none;
+}
+
+.BuySection .input-group>.form-control {
+    border: none;
+    font-size: 20px;
+    font-family: Outfit;
+}
+
+.BuySection .input-group>.form-control::placeholder {
+    color: var(--main-color-black-75);
+}
+
+.BuySection .input-group-text:last-child {
+    border: none;
+}
+
+.BuySection .card .card-title {
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.BuySection .card .card-text {
+    font-size: 16px;
+    font-family: RobotoRegular;
+}
+
+/* Buy Section Style */
+
+/* Intro Section Style */
+.IntroSection {
+    background-image: url(./assets/images/banners/bg-2.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.IntroSection .Banner-title {
+    font-size: 36px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: var(--main-color-black-50);
+    margin-bottom: 30px;
+}
+
+.IntroSection .Banner-content {
+    font-size: 20px;
+    font-family: RobotoRegular;
+    color: var(--main-color-black-50);
+    text-align: justify;
+}
+
+/* Intro Section Style */
+
+
+/* Service Section Style */
+.ServiceSection {
+    background-image: url(./assets/images/banners/bg-1.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.ServiceSection .Banner-title {
+    font-size: 36px;
+    font-family: PoppinsSemiBold;
+    font-weight: bold;
+    color: var(--main-color-black-75);
+}
+
+.ServiceSection .Banner-content {
+    font-size: 20px;
+    font-family: RobotoRegular;
+    color: var(--main-color-black-75);
+    text-align: justify;
+}
+
+.ServiceSection .Section-title {
+    margin-bottom: 50px;
+}
+
+.Section-title {
+    font-size: 36px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: var(--main-color-black-50);
+}
+
+.Section-desc {
+    font-size: 16px;
+    font-family: Outfit;
+    font-weight: 300;
+    color: var(--main-color-black-50);
+    margin-bottom: 50px;
+}
+
+.ServiceSection .accordion {
+    margin-bottom: 15rem;
+    background: none;
+}
+
+.ServiceSection .accordion .accordion-item {
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.ServiceSection .accordion .accordion-item:last-child {
+    border: none;
+}
+
+.ServiceSection .accordion .accordion-button {
+    font-size: 20px;
+    font-family: PoppinsMedium;
+}
+
+.ServiceSection .accordion .accordion-button:focus {
+    box-shadow: none;
+    border-color: #dee2e6;
+}
+
+.ServiceSection .accordion .accordion-button::after {
+    background-image: none !important;
+    content: "+";
+    font-size: 20px;
+    font-family: PoppinsMedium;
+}
+
+.ServiceSection .accordion-button:not(.collapsed)::after {
+    content: "-";
+    transform: none;
+}
+
+.ServiceSection .accordion-button:not(.collapsed) {
+    background: none;
+    box-shadow: none;
+}
+
+/* Service Section Style */
+
+/* WorkflowItemCard */
+.WorkflowItemCard .card-title {
+    font-size: 24px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: var(--main-color-black-50);
+}
+
+.WorkflowItemCard .card-subtitle {
+    font-size: 24px;
+    font-family: RobotoRegular;
+    color: var(--main-color-black-75);
+}
+
+/* WorkflowItemCard */
+
+/* Workflow Banner Style */
+.WorkFlowBanner .Banner-title {
+    font-size: 36px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: var(--main-color-black-50);
+}
+
+.WorkFlowBanner .Banner-subtitle {
+    font-size: 24px;
+    font-family: PoppinsRegular;
+    color: var(--main-color-black-50);
+    margin-bottom: 50px;
+}
+
+.WorkFlowBanner .row .col-lg-4:nth-child(2)::before,
+.WorkFlowBanner .row .col-lg-4:nth-child(2)::after {
+    content: "";
+    width: 115px;
+    height: 30px;
+    background-image: url(./assets/images/banners/arrow.svg);
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+.WorkFlowBanner .row .col-lg-4:nth-child(2)::before {
+    z-index: 1;
+    left: 27%;
+    top: 27%;
+}
+
+.WorkFlowBanner .row .col-lg-4:nth-child(2)::after {
+    z-index: 1;
+    left: 61%;
+    top: 27%;
+}
+
+@media (max-width : 991px) {
+
+    .WorkFlowBanner .row .col-lg-4:nth-child(2)::before,
+    .WorkFlowBanner .row .col-lg-4:nth-child(2)::after {
+        display: none;
+    }
+}
+
+/* Workflow Banner Style */
+
+/* PostCod Banner Style */
+.PostCodeBanner {
+    background-image: url(./assets/images/banners/post-code.jpg);
+    background-size: 100% 100%;
+}
+
+.PostCodeBanner .Banner-title {
+    font-size: 40px;
+    font-family: Outfit;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-shadow: 0 0 5px var(--main-color-black-50);
+}
+
+.PostCodeBanner .Banner-title span {
+    color: var(--main-color-yellow);
+}
+
+.PostCodeBanner #postcode {
+    border: 3px solid var(--main-color-yellow);
+    border-radius: 50px;
+    height: 80px;
+    font-size: 20px;
+    font-family: PoppinsSemiBold;
+    background: none;
+    color: white;
+    text-align: center;
+    box-shadow: none !important;
+}
+
+.PostCodeBanner #postcode:focus {
+    background: #28393e80;
+}
+
+.PostCodeBanner #postcode::placeholder {
+    color: white;
+    text-align: center;
+}
+
+.PostCodeBanner .postcode-submit {
+    height: 80px;
+    background: var(--main-color-black-50);
+    font-size: 20px;
+    font-family: PoppinsSemiBold;
+    color: white;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+}
+
+.PostCodeBanner .postcode-submit:hover {
+    background: var(--main-color-yellow);
+}
+
+/* PostCod Banner Style */
+
+/* Footer Style */
+.Footer .Footer-logo {
+    margin-bottom: 40px;
+}
+
+.Footer-nav .Footer-nav-title {
+    font-size: 20px;
+    font-family: PoppinsSemiBold;
+    margin-bottom: 15px;
+}
+
+.Footer-nav .Footer-nav-list,
+.Footer .copyright {
+    font-size: 18px;
+    font-family: PoppinsRegular;
+}
+
+.Footer-nav .Footer-nav-list .Footer-nav-list-item {
+    margin-bottom: 10px;
+}
+
+/* Footer Style */
+
+/* Detail Page Style */
+.DetailPage .detail-status-group .detail-status-title {
+    font-size: 16px;
+    font-family: Outfit;
+    font-weight: 700;
+    color: var(--main-color-black-75);
+    margin-bottom: 15px;
+}
+
+.DetailPage .detail-status-group .detail-status-list li {
+    font-size: 16px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-75);
+}
+
+.DetailPage button {
+    font-family: MinaBold;
+}
+
+.DetailPage .start-button {
+    height: 75px;
+}
+
+.DetailPage .vehicle-info-title {
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-75);
+}
+
+.DetailPage .vehicle-info-text {
+    font-size: 16px;
+    font-family: Outfit;
+    font-weight: 300;
+    color: var(--main-color-black-75);
+}
+
+.DetailPage .stepper-title,
+.AppointmentDetailPage .stepper-title
+ {
+    font-size: 16px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-75);
+}
+
+.DetailPage .branch-date,
+.AppointmentDetailPage .branch-date
+ {
+    height: 60px;
+}
+
+.DetailPage .branch-date .form-control,
+.AppointmentDetailPage .branch-date .form-control
+ {
+    font-size: 16px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-75);
+}
+
+.DetailPage .branch-date .form-control:focus,
+.AppointmentDetailPage .branch-date .form-control:focus
+ {
+    box-shadow: none;
+    border-color: black;
+}
+
+.DetailPage .date-button-group button,
+.AppointmentDetailPage .date-button-group button
+ {
+    height: 60px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-50);
+}
+
+.DetailPage .date-button-group button:focus,
+.DetailPage .date-button-group button.active,
+.AppointmentDetailPage .date-button-group button:focus,
+.AppointmentDetailPage .date-button-group button.active {
+    background: var(--main-color-black-50) !important;
+    color: white;
+}
+
+.DetailPage .stepper-button,
+.AppointmentDetailPage .stepper-button
+ {
+    height: 60px;
+}
+
+
+
+/* Detail Page Style */
+
+.ValuationCard .card-subtitle {
+    font-size: 30px;
+    font-family: Outfit;
+    font-weight: 300;
+    color: var(--main-color-black-50);
+    margin-bottom: 15px;
+}
+
+.ValuationCard .card-title {
+    font-size: 62px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: var(--main-color-black-50);
+    margin-bottom: 15px;
+}
+
+.ValuationCard .card-text {
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: 300;
+    color: var(--main-color-black-50);
+    margin-bottom: 15px;
+}
+
+/* Appointment summary style */
+.appointment-summary .card .card-title {
+    font-size: 16px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-50);
+    margin-bottom: 15px;
+}
+
+.appointment-summary .card .card-text {
+    font-size: 16px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-50);
+}
+
+/* Appointment summary style */
+
+/* Subdetail Page Style */
+.SubDetailPage .nav-tabs {
+    border: none;
+
+}
+
+.SubDetailPage .nav-tabs li {
+    width: 50%;
+}
+
+.SubDetailPage .nav-tabs li button {
+    width: 95%;
+    height: 98px;
+    font-size: 32px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-50);
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: var(--main-color-gray);
+    margin: auto;
+}
+
+.SubDetailPage .nav-tabs li:first-child button.active {
+    color: white;
+    background: var(--main-color-black-50);
+}
+
+.SubDetailPage .nav-tabs li:last-child button.active {
+    background: var(--main-color-yellow);
+}
+
+.SubDetailPage .form-label {
+    font-size: 16px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: var(--main-color-black-50);
+}
+
+.SubDetailPage .input-group {
+    height: 60px;
+}
+
+.SubDetailPage .input-group .input-group-text {
+    border-color: black;
+}
+
+.SubDetailPage .input-group .form-control {
+    border-color: black;
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: bold;
+}
+
+.SubDetailPage .input-group .form-control:focus {
+    border-color: black;
+    box-shadow: none;
+}
+
+.SubDetailPage .owner-info button {
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: bold;
+    background: var(--main-color-gray) !important;
+    color: var(--main-color-black-50);
+    width: 100%;
+    height: 55px;
+}
+
+.SubDetailPage .owner-info button:focus,
+.SubDetailPage .owner-info button.active {
+    background: var(--main-color-black-50) !important;
+    color: white;
+}
+
+.SubDetailPage .service-history-info button,
+.SubDetailPage .set-info-group button {
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: bold;
+    color: var(--main-color-black-50);
+    background: none;
+    width: 100%;
+    height: 55px;
+}
+
+.SubDetailPage .service-history-info button:focus,
+.SubDetailPage .service-history-info button.active {
+    background: var(--main-color-yellow);
+    border: none !important;
+}
+
+.SubDetailPage .set-info-group button:focus,
+.SubDetailPage .set-info-group button.active {
+    background: var(--main-color-black-50);
+    color: white;
+}
+
+.SubDetailPage .service-history-info .service-history-info-description {
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-50);
+}
+
+.SubDetailPage .update-button {
+    height: 60px;
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-50);
+}
+
+.SubDetailPage .set-info-group-select select {
+    height: 60px;
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-50);
+}
+
+.SubDetailPage .set-info-group-select select:focus {
+    border-color: black;
+    box-shadow: none;
+}
+
+.SubDetailPage .add-damage-button {
+    height: 60px;
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-50);
+    background: var(--main-color-gray) !important;
+}
+
+
+
+.AppointmentPage .Appointment-list li {
+    list-style-type : decimal;
+}
+
+.AppointmentPage .Appointment-list li::marker {
+    font-size: 20px;
+    font-family: Outfit;
+    font-weight: 500;
+    color: var(--main-color-black-50);
+}
+
+.book-appointment-button,
+.stepper-button {
+    height: 60px;
+    font-size: 20px;
+    font-family: MinaBold !important;
+    font-weight: 500;
+    color: var(--main-color-black-50) !important;
+}
+
+/* Subdetail Page Style */
+
+/* AppointmentDetail Page Style */
+.AppointmentDetailPage .form-label,
+.BookPage .form-label{
+    font-size: 16px;
+    font-family: Outfit !important;
+    font-weight: 500;
+    color: black;
+}
+
+.AppointmentDetailPage .form-control,
+.BookPage .form-control
+ {
+    height: 60px;
+    border: none;
+    background: var(--main-color-gray);
+    font-size: 16px !important;
+    font-family: Outfit !important;
+    font-weight: 300;
+    color: var(--main-color-black-50);
+}
+
+.AppointmentDetailPage .input-group-text,
+.BookPage .input-group-text
+ {
+    background: var(--main-color-black-50);
+    padding: 1rem;
+}
+
+.AppointmentDetailPage .form-check.form-switch,
+.BookPage .form-check.form-switch
+ {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 16px;
+    font-family: Outfit !important;
+}
+
+.AppointmentDetailPage .form-check.form-switch input,
+.AppointmentDetailPage .form-switch .form-check-input:focus,
+.BookPage .form-check.form-switch input,
+.BookPage .form-switch .form-check-input:focus
+ {
+    margin-left: 1.5rem !important;
+    height: 25px;
+    width: 75px;
+    border: none;
+    background-color: var(--main-color-gray);
+    box-shadow: none;
+}
+
+.AppointmentDetailPage .form-check-input:checked,
+.BookPage .form-check-input:checked
+ {
+    box-shadow: none;
+    border: none;
+    background-color: var(--main-color-yellow) !important;
+}
+
+.AppointmentDetailPage .submit-button,
+.BookPage .submit-button
+ {
+    height: 60px;
+    font-size: 20px;
+    font-family: MinaBold !important;
+    font-weight: 500;
+    color: var(--main-color-black-50) !important;
+}
+/* AppointmentDetail Page Style */
+
+.preloader-modal .modal-content {
+    border: none;
+}
