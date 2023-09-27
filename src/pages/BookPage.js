@@ -86,7 +86,7 @@ export default function BookPage() {
         axios.post(`${backendUrl}/api/setVehicleStatusData`, postData)
             .then(response => {
                 updateLoading(false);
-                toast.success(response.data.message)
+                // toast.success(response.data.message)
             })
             .catch(error => {
                 updateLoading(false);
