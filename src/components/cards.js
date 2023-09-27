@@ -146,7 +146,7 @@ export const FormCard = () => {
                 <Form.Group className="mb-3 text-start" controlId="exampleForm.ControlInput1">
                     <Form.Label>REGISTRATION</Form.Label>
                     <InputGroup className="mb-3">
-                        <InputGroup.Text i  d="basic-addon1"><Image src={EditIcon} width="25" /></InputGroup.Text>
+                        <InputGroup.Text id="basic-addon1"><Image src={EditIcon} width="25" /></InputGroup.Text>
                         <Form.Control
                             placeholder=""
                             aria-label="reg"
