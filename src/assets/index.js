@@ -11,7 +11,6 @@ import DateIcon from './images/icons/date.svg';
 import MileageIcon from './images/icons/mileage.svg';
 import CheckboxIcon from './images/icons/checkbox.svg';
 import MailLineIcon from './images/icons/mail-line.svg';
-import MapIcon from './images/icons/map.svg';
 import MaoLineIcon from './images/icons/map-line.svg';
 import PhoneLinIcon from './images/icons/phone-line.svg';
 import WorkflowBanner1 from './images/banners/valuation.svg';
