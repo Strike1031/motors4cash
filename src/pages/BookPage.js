@@ -1,5 +1,5 @@
 import { Container, Row, Col, Carousel, Form, InputGroup, Button, Image } from "react-bootstrap";
-import { MailLineIcon } from "../assets";
+import { MailLineIcon, MapIcon, EditIcon, PhoneLinIcon } from "../assets";
 import { useContext, useRef, useState } from "react";
 import { VehicleContext, backendUrl } from "../context/context";
 import { Loading } from "../components/layouts/loading";
@@ -121,7 +121,7 @@ export default function BookPage() {
                                 <div className='text-start mb-3'>
                                     <Form.Label>Name</Form.Label>
                                     <InputGroup className="mb-3">
-                                        <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
+                                        <InputGroup.Text id="basic-addon1"><Image src={EditIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
                                             placeholder="Joe"
                                             aria-describedby="basic-addon1"
@@ -134,7 +134,7 @@ export default function BookPage() {
                                 <div className='text-start mb-3'>
                                     <Form.Label>Postcode</Form.Label>
                                     <InputGroup className="mb-3">
-                                        <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
+                                        <InputGroup.Text id="basic-addon1"><Image src={MapIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
                                             placeholder="e.g. M71 1UN"
                                             aria-describedby="basic-addon1"
@@ -162,7 +162,7 @@ export default function BookPage() {
                                 <div className='text-start mb-3'>
                                     <Form.Label>Phone number</Form.Label>
                                     <InputGroup className="mb-3">
-                                        <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
+                                        <InputGroup.Text id="basic-addon1"><Image src={PhoneLinIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
                                             placeholder="07777111222"
                                             aria-describedby="basic-addon1"
