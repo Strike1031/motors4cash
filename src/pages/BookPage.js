@@ -130,7 +130,9 @@ export default function BookPage() {
                                             value={newName}
                                         />
                                     </InputGroup>
-
+                                </div>
+                                <div className='text-start mb-3'>
+                                    <Form.Label>Postcode</Form.Label>
                                     <InputGroup className="mb-3">
                                         <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
@@ -143,7 +145,7 @@ export default function BookPage() {
                                     </InputGroup>
                                 </div>
                                 <div className='text-start mb-3'>
-                                    <Form.Label>Email address(So we can send your valuation)</Form.Label>
+                                    <Form.Label>Email address</Form.Label>
                                     <InputGroup className="mb-3">
                                         <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
@@ -158,7 +160,7 @@ export default function BookPage() {
                                 </div>
 
                                 <div className='text-start mb-3'>
-                                    <Form.Label>Mobile(To text your valuation)</Form.Label>
+                                    <Form.Label>Phone number</Form.Label>
                                     <InputGroup className="mb-3">
                                         <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
@@ -170,7 +172,7 @@ export default function BookPage() {
                                         />
                                     </InputGroup>
                                 </div>
-                                <div className='text-start mb-3'>
+                                {/* <div className='text-start mb-3'>
                                     <Form.Group className="mb-3">
                                         <Form.Check
                                             required
@@ -180,7 +182,7 @@ export default function BookPage() {
                                             feedbackType="invalid"
                                         />
                                     </Form.Group>
-                                </div>
+                                </div> */}
                                 <div className='text-center mt-5'>
                                     <Button className='bg-yellow border border-0 submit-button w-50' onClick={submitButton}>SEE CAR VALUATION</Button>
                                 </div>
