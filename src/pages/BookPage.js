@@ -42,6 +42,7 @@ export default function BookPage() {
     } = useContext(VehicleContext);
     const inputRef = useRef(null);
 
+    const [newName, setNewName] = useState("");
     const [newEmail, setNewEmail] = useState("");
     const [newPostCode, setNewPostCode] = useState("");
     const [newPhone, setNewPhone] = useState("");
@@ -73,6 +74,7 @@ export default function BookPage() {
             "zone": zone,
             "component": component,
             "fault": fault,
+            "name": newName,
             "email": newEmail,
             "postcode": newPostCode,
             "phone": newPhone,
@@ -90,7 +92,7 @@ export default function BookPage() {
                 updateLoading(false);
                 console.error('Error:', error);
             }
-        );
+            );
     }
 
     return (
@@ -117,6 +119,30 @@ export default function BookPage() {
                             </Col>
                             <Col sm={12} lg={6} className="mb-2">
                                 <div className='text-start mb-3'>
+                                    <Form.Label>Name</Form.Label>
+                                    <InputGroup className="mb-3">
+                                        <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
+                                        <Form.Control
+                                            placeholder="Joe"
+                                            aria-describedby="basic-addon1"
+                                            ref={inputRef}
+                                            onChange={(e) => setNewName(e.target.value)}
+                                            value={newName}
+                                        />
+                                    </InputGroup>
+
+                                    <InputGroup className="mb-3">
+                                        <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
+                                        <Form.Control
+                                            placeholder="e.g. M71 1UN"
+                                            aria-describedby="basic-addon1"
+                                            ref={inputRef}
+                                            onChange={(e) => setNewPostCode(e.target.value)}
+                                            value={newPostCode}
+                                        />
+                                    </InputGroup>
+                                </div>
+                                <div className='text-start mb-3'>
                                     <Form.Label>Email address(So we can send your valuation)</Form.Label>
                                     <InputGroup className="mb-3">
                                         <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
@@ -130,19 +156,7 @@ export default function BookPage() {
                                         />
                                     </InputGroup>
                                 </div>
-                                <div className='text-start mb-3'>
-                                    <Form.Label>Postcode(To find local branch)</Form.Label>
-                                    <InputGroup className="mb-3">
-                                        <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
-                                        <Form.Control
-                                            placeholder="e.g. M71 1UN"
-                                            aria-describedby="basic-addon1"
-                                            ref={inputRef}
-                                            onChange={(e) => setNewPostCode(e.target.value)}
-                                            value={newPostCode}
-                                        />
-                                    </InputGroup>
-                                </div>
+
                                 <div className='text-start mb-3'>
                                     <Form.Label>Mobile(To text your valuation)</Form.Label>
                                     <InputGroup className="mb-3">

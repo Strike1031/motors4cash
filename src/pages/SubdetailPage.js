@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { VehicleContext } from "../context/context";
 import { NavLink } from "react-router-dom";
 import {toast} from "react-toastify"
+import { useNavigate } from "react-router-dom";
 
 export default function SubDetailPage() {
 
@@ -39,11 +40,12 @@ export default function SubDetailPage() {
         const [newPolice, setNewPolice] = useState(police);
         const [newSeats, setNewSeats] = useState(seats);
 
-
+        const navigate =  useNavigate();
 
         const updateAssumption = () => {
             updateAssumptionValues(newMileage, newPreviousOwners, newServiceHistory, newPersonalRegister, newImportStatus, newVkey, newNonRunner, newMotMonth, newInsurance, newPrivateHire, newDrivingTuition, newPolice, newSeats);
-            toast.success("Success");
+            // toast.success("Success");
+            navigate("/book/1");
         }
 
 
@@ -216,9 +218,12 @@ export default function SubDetailPage() {
         const [newComponent, setNewComponent] = useState(component);
         const [newFault, setNewFault] = useState(fault);
 
+        const navigate = useNavigate();
+
         const updateDamage = () => {
             updateVehicleDamage(newZone, newComponent, newFault);
-            toast.success("Success");
+            // toast.success("Success");
+            navigate('/book/1');
         }
         return (
             <div className="VehicleDamageContent">

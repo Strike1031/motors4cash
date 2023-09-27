@@ -144,9 +144,9 @@ export const FormCard = () => {
         <Card className="FormCard bg-yellow border-0 py-5 px-3 my-5">
             <Card.Body className="text-center">
                 <Form.Group className="mb-3 text-start" controlId="exampleForm.ControlInput1">
-                    <Form.Label>ENTER REG</Form.Label>
+                    <Form.Label>REGISTRATION</Form.Label>
                     <InputGroup className="mb-3">
-                        <InputGroup.Text id="basic-addon1"><Image src={EditIcon} width="25" /></InputGroup.Text>
+                        <InputGroup.Text i  d="basic-addon1"><Image src={EditIcon} width="25" /></InputGroup.Text>
                         <Form.Control
                             placeholder=""
                             aria-label="reg"
