@@ -5,7 +5,7 @@ import { VehicleContext } from "../context/context";
 import { NavLink } from "react-router-dom";
 
 export default function SubDetailPage() {
-   
+
     const AssumptionContent = () => {
         const {
             mileage,
@@ -269,7 +269,7 @@ export default function SubDetailPage() {
 
     return (
         <div className="SubDetailPage py-5">
-            <div className='Section-title text-center'>Update assumptions & add damage</div>
+            <div className='Section-title text-center'>Vehicle information</div>
             <div className='Section-desc text-center'>Here you can let us know about any vehicle damage and update your assumptions</div>
             <Container>
                 <Tabs
@@ -284,9 +284,15 @@ export default function SubDetailPage() {
                         <VehicleDamageContent />
                     </Tab>
                 </Tabs>
-                <div>
-                    <NavLink to="/detail/1" className="fw-bold nav-link">Back</NavLink>
+                <div className="d-flex align-items-center justify-content-between">
+                    <div>
+                        <NavLink to="/detail/1" className="fw-bold nav-link">Back</NavLink>
+                    </div>
+                    <div>
+                        <NavLink to="/book/1" className="fw-bold nav-link">Next</NavLink>
+                    </div>
                 </div>
+
             </Container>
         </div>
     )

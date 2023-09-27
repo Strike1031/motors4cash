@@ -1,13 +1,14 @@
-import { Col, Container, Row, Carousel, Image, Card } from "react-bootstrap";
+import { Col, Container, Row, Carousel, Image, Card, Button } from "react-bootstrap";
 import { WorkFlowBanner } from "../components/banners";
 import CarImage from '../assets/images/models/car.jpg';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {Stepper} from "../components/stepper";
 import { useContext } from "react";
 import { VehicleContext } from "../context/context";
 
 export default function DetailPage() {
     const {price, imageDetailsList} = useContext(VehicleContext);
+    const navigate = useNavigate();
     return (
         <div className="DetailPage py-5">
             <Container>
@@ -24,7 +25,7 @@ export default function DetailPage() {
                             ))
                         }                            
                         </Carousel>
-                        <div className="detail-status-group">
+                        {/* <div className="detail-status-group">
                             <div className="detail-status-title mt-5">Assumptions & add damage for an accurate valuation</div>
                             <ul className="detail-status-list">
                                 <li>Sale may be subject to a transaction fee</li>
@@ -43,7 +44,7 @@ export default function DetailPage() {
                             </ul>
                             <div className="detail-status-title mt-5">Before booking an appointment, check all assumptions are correct and add any vehicle damage, to ensure you obtain an accurate price.</div>
                             <Link to="/detail/1/subdetail" className="text-black fw-bold">Update assumptions & add damage</Link>
-                        </div>
+                        </div> */}
                     </Col>
                     <Col sm={12} lg={8} className="mb-2">                                
                         <Card className="rounded rounded-0 ValuationCard text-center p-4 mb-3">
@@ -53,7 +54,17 @@ export default function DetailPage() {
                                 <Card.Text>Based on 105,764 offers for Mercedes vehicles from 2,743 dealers on Motors4cash.</Card.Text>
                             </Card.Body>
                         </Card>                        
-                        <Stepper/>
+                        <Card className="ValuationCard text-center p-4 mb-3 border border-0 shadow">
+                            <Card.Body>
+                                <div className="d-flex flex-row align-items-center justify-content-between">
+                                    <div className="text-start vehicle-info">
+                                        <div className="vehicle-info-title">Vehicle information</div>
+                                        <div className="vehicle-info-text">Features, equipment & ownership</div>
+                                    </div>
+                                    <Button className="bg-main-black-50 border border-0 start-button w-50" onClick={() => navigate("/detail/1/subdetail")}>START</Button>
+                                </div>
+                            </Card.Body>
+                        </Card>
                     </Col>
                 </Row>
             </Container>
