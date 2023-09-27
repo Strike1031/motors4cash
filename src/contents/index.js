@@ -15,13 +15,13 @@ export const FooterNavs = {
 export const WorkflowItemList = [
     {
         image : WorkflowBanner1,
-        title : "Free valuation",
+        title : "Free Valuation",
         subtitle : "Get your instant valuation in seconds."
     },
     {
         image : WorkflowBanner2,
-        title : "Book an appointment",
-        subtitle : "Once we have reviewed you valuation we will request a timeslot."
+        title : "Book an Appointment",
+        subtitle : "Once we have reviewed your valuation we will request a timeslot."
     },
     {
         image : WorkflowBanner3,
