@@ -2,7 +2,7 @@ import { Container, Row, Col, Card, Image, Button } from "react-bootstrap";
 import { WorkFlowBanner } from "../components/banners";
 import { DateIcon, MapIcon } from "../assets";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { VehicleContext, backendUrl } from "../context/context";
 import axios from 'axios';
 
@@ -25,8 +25,11 @@ export default function AppointmentPage() {
                 updateLoading(false);
             });
     }
+    useEffect(() => (
+        getData()
 
-    getData();
+    ), [])
+
     return (
         <div className="AppointmentPage py-5">
             <section>
@@ -38,7 +41,7 @@ export default function AppointmentPage() {
                             <hr />
                             <ul className="Appointment-list">
                                 {appointmentData.map((item, index) => (
-                                    <li className="Appointment-list-item">
+                                    <li className="Appointment-list-item" key={index}>
                                         <Row className='appointment-summary'>
                                             <Col sm={12} lg={6} className='mb-3'>
                                                 <Card className='border border-0 rounded rounded-0 bg-main-gray text-black-50 w-full py-5'>

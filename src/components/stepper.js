@@ -1,5 +1,5 @@
 import React, { useContext, useState, useRef } from 'react';
-import { Card, Button, InputGroup, Form, Row, Col, Image } from 'react-bootstrap';
+import { Card, Button, InputGroup, Form, Row, Col, Image, FormGroup } from 'react-bootstrap';
 import { DateIcon, MapIcon } from '../assets';
 import { useNavigate } from 'react-router-dom';
 import { VehicleContext } from '../context/context';
@@ -171,7 +171,6 @@ export const Stepper = () => {
 
 export const ManageStepper = () => {
     const [currentStep, setCurrentStep] = useState(0);
-    const inputRef = useRef(null);
     const { updateBranchDate } = useContext(VehicleContext);
     const navigate = useNavigate();
 
@@ -246,18 +245,23 @@ export const ManageStepper = () => {
                     <div className='Section-title'>Book Appointment</div>
                     <div className='Section-desc'>Here you can let us know about any vehicle damage and update your assumptions</div>
                     <div className='stepper-title mb-3 text-start'>Select branch and date</div>
-                    <InputGroup className="mb-3 branch-date">
-                        <Form.Control aria-label="First name" className='w-25' ref={inputRef} value={newAppointmentPlace} onChange={(e) => setNewAppointmentPlace(e.target.value)} />
-                        {/* <Form.Control aria-label="Last name" type='number' /> */}
-                    </InputGroup>
-                    <Row className='date-button-group'>
-                        {
-                            dateList.map((item, index) => (
-                                <Col sm={6} md={4} lg={3} key={index}><Button className='bg-main-gray border border-0 w-100 mb-3' onClick={() => setNewAppointmentDate(`${item.dayName}, ${item.month_date}`)}>{item.dayName}<br /><strong>{item.month_date}</strong></Button></Col>
-                            ))
-                        }
+                    <FormGroup>
+                        <InputGroup className="mb-3 branch-date">
+                            <Form.Control aria-label="First name" className='w-25' value={newAppointmentPlace} onChange={(e) => setNewAppointmentPlace(e.target.value)} />
+                            {/* <Form.Control aria-label="Last name" type='number' /> */}
+                        </InputGroup>
+                    </FormGroup>
 
-                    </Row>
+                    <FormGroup>
+                        <Row className='date-button-group'>
+                            {
+                                dateList.map((item, index) => (
+                                    <Col sm={6} md={4} lg={3} key={index}><Button type="button" className='bg-main-gray border border-0 w-100 mb-3' onClick={() => setNewAppointmentDate(`${item.dayName}, ${item.month_date}`)}>{item.dayName}<br /><strong>{item.month_date}</strong></Button></Col>
+                                ))
+                            }
+                        </Row>
+                    </FormGroup>
+
                     <hr />
                     <div className='stepper-title mb-3 text-start'>Select A Time</div>
                     <Row className='date-button-group'>
