@@ -3,6 +3,7 @@ import { MileageIcon } from "../assets";
 import { useContext, useState } from "react";
 import { VehicleContext } from "../context/context";
 import { NavLink } from "react-router-dom";
+import {toast} from "react-toastify"
 
 export default function SubDetailPage() {
 
@@ -42,6 +43,7 @@ export default function SubDetailPage() {
 
         const updateAssumption = () => {
             updateAssumptionValues(newMileage, newPreviousOwners, newServiceHistory, newPersonalRegister, newImportStatus, newVkey, newNonRunner, newMotMonth, newInsurance, newPrivateHire, newDrivingTuition, newPolice, newSeats);
+            toast.success("Success");
         }
 
 
@@ -61,14 +63,14 @@ export default function SubDetailPage() {
                 <Row className="mb-3 owner-info">
                     <Col>
                         <Form.Label htmlFor="basic-url">Previous owners</Form.Label>
-                        <Row>
-                            <Col><Button className="border border-0" onClick={() => setNewPreviousOwners(0)} active={newPreviousOwners == 0 ? true : false}>0</Button></Col>
-                            <Col><Button className="border border-0" onClick={() => setNewPreviousOwners(1)} active={newPreviousOwners == 1 ? true : false}>1</Button></Col>
-                            <Col><Button className="border border-0" onClick={() => setNewPreviousOwners(2)} active={newPreviousOwners == 2 ? true : false}>2</Button></Col>
-                            <Col><Button className="border border-0" onClick={() => setNewPreviousOwners(3)} active={newPreviousOwners == 3 ? true : false}>3</Button></Col>
-                            <Col><Button className="border border-0" onClick={() => setNewPreviousOwners(4)} active={newPreviousOwners == 4 ? true : false}>4</Button></Col>
-                            <Col><Button className="border border-0" onClick={() => setNewPreviousOwners(5)} active={newPreviousOwners >= 5 ? true : false}>5+</Button></Col>
-                            <Col><Button className="border border-0" onClick={() => setNewPreviousOwners(-1)} active={newPreviousOwners < 0 ? true : false}>?</Button></Col>
+                        <Row className="d-flex flex-wrap">
+                            <Col className="my-1 "><Button className="border border-0" onClick={() => setNewPreviousOwners(0)} active={newPreviousOwners == 0 ? true : false}>0</Button></Col>
+                            <Col className="my-1 "><Button className="border border-0" onClick={() => setNewPreviousOwners(1)} active={newPreviousOwners == 1 ? true : false}>1</Button></Col>
+                            <Col className="my-1 "><Button className="border border-0" onClick={() => setNewPreviousOwners(2)} active={newPreviousOwners == 2 ? true : false}>2</Button></Col>
+                            <Col className="my-1 "><Button className="border border-0" onClick={() => setNewPreviousOwners(3)} active={newPreviousOwners == 3 ? true : false}>3</Button></Col>
+                            <Col className="my-1 "><Button className="border border-0" onClick={() => setNewPreviousOwners(4)} active={newPreviousOwners == 4 ? true : false}>4</Button></Col>
+                            <Col className="my-1 "><Button className="border border-0" onClick={() => setNewPreviousOwners(5)} active={newPreviousOwners >= 5 ? true : false}>5+</Button></Col>
+                            <Col className="my-1 "><Button className="border border-0" onClick={() => setNewPreviousOwners(-1)} active={newPreviousOwners < 0 ? true : false}>?</Button></Col>
                         </Row>
                     </Col>
                 </Row>
@@ -76,10 +78,10 @@ export default function SubDetailPage() {
                     <Col>
                         <Form.Label htmlFor="basic-url">Service History</Form.Label>
                         <Row className="mb-3">
-                            <Col><Button className="border border-black" onClick={() => setNewServiceHistory(0)} active={newServiceHistory == 0 ? true : false}>Full</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewServiceHistory(1)} active={newServiceHistory == 1 ? true : false}>Some</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewServiceHistory(2)} active={newServiceHistory == 2 ? true : false}>None</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewServiceHistory(3)} active={newServiceHistory == 3 ? true : false}>First Not Due</Button></Col>
+                            <Col sm={6} md={3} className="my-1 "><Button className="border border-black" onClick={() => setNewServiceHistory(0)} active={newServiceHistory == 0 ? true : false}>Full</Button></Col>
+                            <Col sm={6} md={3} className="my-1 "><Button className="border border-black" onClick={() => setNewServiceHistory(1)} active={newServiceHistory == 1 ? true : false}>Some</Button></Col>
+                            <Col sm={6} md={3} className="my-1 "><Button className="border border-black" onClick={() => setNewServiceHistory(2)} active={newServiceHistory == 2 ? true : false}>None</Button></Col>
+                            <Col sm={6} md={3} className="my-1 "><Button className="border border-black" onClick={() => setNewServiceHistory(3)} active={newServiceHistory == 3 ? true : false}>First Not Due</Button></Col>
                         </Row>
                         <Card className="border border-black service-history-info-description">
                             <Card.Body className="px-5">
@@ -106,9 +108,9 @@ export default function SubDetailPage() {
                     <Col>
                         <Form.Label htmlFor="basic-url">Is your car an import?</Form.Label>
                         <Row className="mb-3">
-                            <Col><Button className="border border-black" onClick={() => setNewImportStatus(0)} active={newImportStatus == 0 ? true : false}>No</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewImportStatus(1)} active={newImportStatus == 1 ? true : false}>Yes (European)</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewImportStatus(2)} active={newImportStatus == 2 ? true : false}>Yes (Non-European)</Button></Col>
+                            <Col md={4} sm={12} className="my-2"><Button className="border border-black" onClick={() => setNewImportStatus(0)} active={newImportStatus == 0 ? true : false}>No</Button></Col>
+                            <Col md={4} sm={12} className="my-2"><Button className="border border-black" onClick={() => setNewImportStatus(1)} active={newImportStatus == 1 ? true : false}>Yes (European)</Button></Col>
+                            <Col md={4} sm={12} className="my-2"><Button className="border border-black" onClick={() => setNewImportStatus(2)} active={newImportStatus == 2 ? true : false}>Yes (Non-European)</Button></Col>
                         </Row>
                     </Col>
                 </Row>
@@ -193,9 +195,11 @@ export default function SubDetailPage() {
                         </Row>
                     </Col>
                 </Row>
-                <div className="text-center">
-                    <Button className="w-50 border border-0 bg-yellow update-button" onClick={updateAssumption}>UPDATE VALUATION</Button>
-                </div>
+                <Row className="mb-5">
+                    <Col sm={12} md={6} className="mx-auto">
+                        <Button className="w-100 border border-0 bg-yellow update-button" onClick={updateAssumption}>GET VALUATION</Button>
+                    </Col>
+                </Row>
             </div>
         )
     }
@@ -213,7 +217,8 @@ export default function SubDetailPage() {
         const [newFault, setNewFault] = useState(fault);
 
         const updateDamage = () => {
-            updateVehicleDamage(newZone, newComponent, newFault)
+            updateVehicleDamage(newZone, newComponent, newFault);
+            toast.success("Success");
         }
         return (
             <div className="VehicleDamageContent">
@@ -259,10 +264,11 @@ export default function SubDetailPage() {
                         </InputGroup>
                     </Col>
                 </Row>
-                <div className="text-center">
-                    {/* <Button className="w-100 border border-0 add-damage-button mb-3">ADD DAMAGE</Button> */}
-                    <Button className="w-100 border border-0 bg-yellow update-button mb-3" onClick={updateDamage}>UPDATE VALUATION</Button>
-                </div>
+                <Row className="mb-5">
+                    <Col sm={12} md={6} className="mx-auto">
+                        <Button className="w-100 border border-0 bg-yellow update-button" onClick={updateDamage}>GET VALUATION</Button>
+                    </Col>
+                </Row>
             </div>
         )
     }
@@ -277,10 +283,10 @@ export default function SubDetailPage() {
                     id="uncontrolled-tab-example"
                     className="mb-3"
                 >
-                    <Tab eventKey="assumptions" title="Assumptions">
+                    <Tab eventKey="assumptions"  title="Assumptions">
                         <AssumptionContent />
-                    </Tab>
-                    <Tab eventKey="vehicle_damage" title="Vehicle damage">
+                    </Tab>    
+                    <Tab eventKey="vehicle_damage"  title="Vehicle damage">
                         <VehicleDamageContent />
                     </Tab>
                 </Tabs>

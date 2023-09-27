@@ -587,7 +587,7 @@
 .SubDetailPage .nav-tabs li button {
     width: 95%;
     height: 98px;
-    font-size: 32px;
+    /* font-size: 32px; */
     font-family: Outfit;
     font-weight: 500;
     color: var(--main-color-black-50);
@@ -805,4 +805,13 @@
 
 .preloader-modal .modal-content {
     border: none;
+}
+
+@media (max-width : 540px) {
+    button[role="tab"] {
+        font-size: 20px !important ;
+    }
+}
+button[role="tab"] {
+    font-size: 28px;
 }

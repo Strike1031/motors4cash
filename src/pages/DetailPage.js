@@ -47,13 +47,13 @@ export default function DetailPage() {
                         </div> */}
                     </Col>
                     <Col sm={12} lg={8} className="mb-2">                                
-                        <Card className="rounded rounded-0 ValuationCard text-center p-4 mb-3">
+                        {/* <Card className="rounded rounded-0 ValuationCard text-center p-4 mb-3">
                             <Card.Body>
                                 <Card.Subtitle>Valued @</Card.Subtitle>
                                 <Card.Title>{price}</Card.Title>
                                 <Card.Text>Based on 105,764 offers for Mercedes vehicles from 2,743 dealers on Motors4cash.</Card.Text>
                             </Card.Body>
-                        </Card>                        
+                        </Card>                         */}
                         <Card className="ValuationCard text-center p-4 mb-3 border border-0 shadow">
                             <Card.Body>
                                 <div className="d-flex flex-row align-items-center justify-content-between">
