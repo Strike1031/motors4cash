@@ -5,6 +5,7 @@ import { VehicleContext, backendUrl } from "../context/context";
 import { Loading } from "../components/layouts/loading";
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
 
 export default function BookPage() {
     const {
@@ -46,6 +47,7 @@ export default function BookPage() {
     const [newEmail, setNewEmail] = useState("");
     const [newPostCode, setNewPostCode] = useState("");
     const [newPhone, setNewPhone] = useState("");
+    const navigate = useNavigate();
     const submitButton = () => {
         updateLoading(true);
         updateUserInfo(newEmail, newPostCode, newPhone);
@@ -86,6 +88,7 @@ export default function BookPage() {
         axios.post(`${backendUrl}/api/setVehicleStatusData`, postData)
             .then(response => {
                 updateLoading(false);
+                navigate('/contact/1');
                 // toast.success(response.data.message)
             })
             .catch(error => {

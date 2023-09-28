@@ -9,6 +9,7 @@ import SubDetailPage from './pages/SubdetailPage';
 import { AppointmentDetailPage } from './pages/AppointmentDetailPage';
 import VehicleContextProvider from './context/context';
 import BookPage from './pages/BookPage';
+import ContactPage from './pages/ContactPage';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer} from 'react-toastify';
 import AdminLogin from './pages/AdminLogin';
@@ -33,6 +34,7 @@ function App() {
           <Route element={<AdminLayout/>}>
             <Route path='/admin' element={<AdminLogin/>}/>
             <Route path='/admin/table' element={<AdminTable/>}/>
+            <Route path="/contact/:id" element={<ContactPage/>}/>
           </Route>
           </Routes>
         </BrowserRouter>

@@ -191,3 +191,26 @@ export const WorkflowItemCard = ({ image, title, subtitle }) => {
         </Card>
     )
 }
+
+export const ContactCard = () => {
+
+    const navigate = useNavigate();
+    return (
+        <Card className="FormCard bg-yellow border-0 py-5 px-3 my-5">
+            <Card.Body className="text-center">
+                <Form.Group className="mb-3 text-center" controlId="ControlInput1">
+                    <Form.Label className="fs-1">Motors<span style={{color: "red"}}>4</span>cash</Form.Label>
+                </Form.Group>
+                <Form.Group className="mb-3 text-center" controlId="ControlInput2">
+                    <Form.Label className="fs-3">We'll call you to arrange an appointment</Form.Label>
+                </Form.Group>
+                <Form.Group className="mb-3 text-center" controlId="ControlInput3">
+                    <Form.Label className="fs-3">In a hurry? call us on</Form.Label>
+                </Form.Group>
+                <Form.Group className="mb-3 text-center" controlId="ControlInput3">
+                    <Form.Label className="fs-2" style={{color: "purple"}}>0333 015 4444</Form.Label>
+                </Form.Group>
+            </Card.Body>
+        </Card>
+    )
+}
