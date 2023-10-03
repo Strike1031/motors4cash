@@ -126,6 +126,7 @@ export default function BookPage() {
                                     <InputGroup className="mb-3">
                                         <InputGroup.Text id="basic-addon1"><Image src={EditIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
+                                            required
                                             placeholder="Joe"
                                             aria-describedby="basic-addon1"
                                             ref={inputRef}
@@ -139,6 +140,7 @@ export default function BookPage() {
                                     <InputGroup className="mb-3">
                                         <InputGroup.Text id="basic-addon1"><Image src={MapIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
+                                            required
                                             placeholder="e.g. M71 1UN"
                                             aria-describedby="basic-addon1"
                                             ref={inputRef}
@@ -152,6 +154,7 @@ export default function BookPage() {
                                     <InputGroup className="mb-3">
                                         <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
+                                            required
                                             placeholder="e.g. name@email.com"
                                             aria-describedby="basic-addon1"
                                             type="email"
@@ -167,6 +170,7 @@ export default function BookPage() {
                                     <InputGroup className="mb-3">
                                         <InputGroup.Text id="basic-addon1"><Image src={PhoneLinIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
+                                            required
                                             placeholder="07777111222"
                                             aria-describedby="basic-addon1"
                                             ref={inputRef}

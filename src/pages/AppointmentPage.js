@@ -90,7 +90,7 @@ export default function AppointmentPage() {
                             <ul className="Appointment-list">
                                 <li className="Appointment-list-item">
                                     <Row className='appointment-summary'>
-                                        <Col className="text-center fs-1 fw-bold">Not have Appointment Data!</Col>
+                                        <Col className="text-center fs-1 fw-bold">No Active Appointments</Col>
                                     </Row>
                                 </li>
                             </ul>
