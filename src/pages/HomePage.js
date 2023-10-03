@@ -154,6 +154,20 @@ function HomePage() {
                     We do recommend that you declare any faults or damage as they may affect your final valuation.
                   </Accordion.Body>
                 </Accordion.Item>
+                <Accordion.Item eventKey="5">
+                  <Accordion.Header><Image src={FaqIcon} width="25" className="me-3" />What paperwork do I need to sell my car?</Accordion.Header>
+                  <Accordion.Body>
+                  To sell your car to us you need the following documentation: <br/>
+                  V5 vehicle log book<br/>
+                  Service history (whether digital or in a booklet)<br/>
+                  Any receipts of work undertaken<br/>
+                  Owners manuals<br/>
+                  2 forms of ID (one which can be a driving licence or passport, and other bank statement or utility bill showing an address that matches V5)<br/>
+                  Bank account details<br/>
+                  Also don't forget the spare keys and the locking wheel nut<br/>
+                  If you don't have any of these contact us prior to visiting us to discuss
+                  </Accordion.Body>
+                </Accordion.Item>
               </Accordion>
             </Container>
           </section>

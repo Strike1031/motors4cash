@@ -213,11 +213,11 @@ export const ContactCard = () => {
                 <Form.Group className="mb-3 text-center" controlId="ControlInput3">
                     <Form.Label className="fs-2" style={{color: "purple"}}>0333 015 4444</Form.Label>
                 </Form.Group>
-                {/* <Button className="ValueCar-submit w-75" onClick={goBack}>
+                <Button className="ValueCar-submit w-75" onClick={goBack}>
                     <Link to="/" className="nav-link">
-                    Go back
+                        Back to Home
                     </Link>
-                </Button> */}
+                </Button>
             </Card.Body>
         </Card>
     )

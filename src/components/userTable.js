@@ -24,8 +24,8 @@ export const UserTable = (props) => {
         })
         .catch(error => {
             // Handle any errors that occurred during the request
-            toast.error("Unauthorized User");
-            console.error('Error:', error);
+            // toast.error("Unauthorized User");
+            // console.error('Error:', error);
         });
     }, []); 
 

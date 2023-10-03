@@ -153,9 +153,8 @@ export default function SubDetailPage() {
                         <Form.Label>Has your vehicle ever been subject to an insurance write off or been accident damaged?</Form.Label>
                         <InputGroup>
                             <Form.Select className="border border-black" aria-label="Default select example" value={newInsurance} onChange={(e) => setNewInsurance(e.target.value)}>
-                                <option value="0">Open this select menu</option>
-                                <option value="1">Never written off</option>
-                                <option value="2">Never written on</option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
                             </Form.Select>
                         </InputGroup>
                     </Col>
@@ -165,8 +164,8 @@ export default function SubDetailPage() {
                     <Col>
                         <Form.Label htmlFor="basic-url">Has your vehicle ever been used for private hire?</Form.Label>
                         <Row className="mb-3">
-                            <Col><Button className="border border-black" onClick={() => setNewPrivateHire(false)} active={newPrivateHire == false ? true : false}>1</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewPrivateHire(true)} active={newPrivateHire == true ? true : false}>2 or more</Button></Col>
+                            <Col><Button className="border border-black" onClick={() => setNewPrivateHire(false)} active={newPrivateHire == false ? true : false}>Yes</Button></Col>
+                            <Col><Button className="border border-black" onClick={() => setNewPrivateHire(true)} active={newPrivateHire == true ? true : false}>No</Button></Col>
                         </Row>
                     </Col>
                 </Row>
@@ -229,10 +228,10 @@ export default function SubDetailPage() {
             <div className="VehicleDamageContent">
                 <Row className="mb-3 set-info-group-select">
                     <Col>
-                        <Form.Label>Select zone</Form.Label>
+                        <Form.Label>Select Zone</Form.Label>
                         <InputGroup>
                             <Form.Select className="border border-black" aria-label="Default select example" value={newZone} onChange={(e) => setNewZone(e.target.value)}>
-                                <option value="0">Select zone...</option>
+                                <option value="0">Select Zone...</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -243,10 +242,10 @@ export default function SubDetailPage() {
                 </Row>
                 <Row className="mb-3 set-info-group-select">
                     <Col>
-                        <Form.Label>Select component</Form.Label>
+                        <Form.Label>Select Component</Form.Label>
                         <InputGroup>
                             <Form.Select className="border border-black" aria-label="Default select example" value={newComponent} onChange={(e) => setNewComponent(e.target.value)}>
-                                <option value="0">Select componen...</option>
+                                <option value="0">Select Component...</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -257,10 +256,10 @@ export default function SubDetailPage() {
                 </Row>
                 <Row className="mb-3 set-info-group-select">
                     <Col>
-                        <Form.Label>Select fault</Form.Label>
+                        <Form.Label>Select Fault</Form.Label>
                         <InputGroup>
                             <Form.Select className="border border-black" aria-label="Default select example" value={newFault} onChange={(e) => setNewFault(e.target.value)}>
-                                <option value="0">Select fault...</option>
+                                <option value="0">Select Fault...</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>

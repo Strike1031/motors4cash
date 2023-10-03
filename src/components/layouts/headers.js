@@ -30,13 +30,12 @@ export function DefaultHeader() {
                             <Col sm={12} md={2} lg={1} className="text-center mb-2"><Image src={_model} width="90" /></Col>
                             <Col sm={12} md={10} lg={11} className="model-info">
                                 <div className="badge-group text-center text-md-start"><span className="me-2 bg-main-gray model-badge">{vehicleNumber}</span></div>
-                                <div >
-                                    <div className="model-name text-center text-md-start">{vehicleName}</div>
+                                <div>
+                                    <div className="model-name text-center text-md-start my-3">{vehicleName}</div>
                                     <ul className="d-flex align-items-center flex-wrap">
                                         <li>{createdYear}</li>
                                         <li>{mileage}</li>
                                         <li>{color}</li>
-                                        <li>{price}</li>
                                         <li>{bodyStyle}</li>
                                         <li>{fuelType}</li>
                                     </ul>

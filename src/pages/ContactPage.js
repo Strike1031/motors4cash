@@ -13,7 +13,7 @@ export default function ContactPage() {
                         <Row className="justify-content-end">
                             <Col sm={12} lg={4} className="py-5">
                                 <div className="text-center fs-1 fw-bold">
-                                    Thank &nbsp;&nbsp;you!
+                                    Thank&nbsp;you!
                                 </div>
                                 <ContactCard />
                             </Col>
