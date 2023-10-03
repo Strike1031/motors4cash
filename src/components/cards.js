@@ -195,6 +195,9 @@ export const WorkflowItemCard = ({ image, title, subtitle }) => {
 export const ContactCard = () => {
 
     const navigate = useNavigate();
+    const goBack = () => {
+        navigate('/');
+    }
     return (
         <Card className="FormCard bg-yellow border-0 py-5 px-3 my-5">
             <Card.Body className="text-center">
@@ -210,6 +213,11 @@ export const ContactCard = () => {
                 <Form.Group className="mb-3 text-center" controlId="ControlInput3">
                     <Form.Label className="fs-2" style={{color: "purple"}}>0333 015 4444</Form.Label>
                 </Form.Group>
+                {/* <Button className="ValueCar-submit w-75" onClick={goBack}>
+                    <Link to="/" className="nav-link">
+                    Go back
+                    </Link>
+                </Button> */}
             </Card.Body>
         </Card>
     )

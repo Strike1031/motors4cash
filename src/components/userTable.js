@@ -37,27 +37,21 @@ export const UserTable = (props) => {
                     <tr>
                         <th>id</th>
                         <th>vehicle_number</th>
-                        <th>vehicle_name</th>
-                        <th>created_year</th>
-                        <th>color</th>
-                        <th>bodyStyle</th>
-                        <th>fuelType</th>
-                        <th>mileage</th>
-                        <th>price</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Postal Code</th>
+                        <th>Phone Number</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         data && data.map(value => <tr key={value.id} style={{cursor: "pointer"}}>
                             <td>{value.id}</td>
-                            <td>{value["vehicle_number"]}</td>
-                            <td>{value["vehicle_name"]}</td>
-                            <td>{value["created_year"]}</td>
-                            <td>{value["color"]}</td>
-                            <td>{value["bodyStyle"]}</td>
-                            <td>{value["fuelType"]}</td>
-                            <td>{value["mileage"]}</td>
-                            <td>{value["price"]}</td>
+                            <td>{value["car_id"]}</td>
+                            <td>{value["name"]}</td>
+                            <td>{value["email"]}</td>
+                            <td>{value["postcode"]}</td>
+                            <td>{value["phone"]}</td>
                         </tr>)
                     }
                 </tbody>
