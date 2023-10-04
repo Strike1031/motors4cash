@@ -184,16 +184,18 @@ export default function SubDetailPage() {
                 <Row className="mb-3 set-info-group">
                     <Col>
                         <Form.Label htmlFor="basic-url">Has your vehicle ever been subject to an insurance write off or been accident damaged?</Form.Label>
-                        <Row className="mb-3">
-                            <Col><Button className="border border-black" onClick={() => setNewDamaged(true)} active={newDamaged == 0 ? true : false}>Never written off</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 1 ? true : false}>A - Damage deemed unrepairable, no salvageable parts</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 2 ? true : false}>B - Damage deemed unrepairable, salvageable parts</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 3 ? true : false}>C - Damage deemed repairable, cost greater than vehicle value</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 4 ? true : false}>D - Damage deemed repairable, cost less than vehicle value</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 5 ? true : false}>VCAR - Cat C/D repaired, DOT inspected</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 6 ? true : false}>S - Structurally damaged, repairable</Button></Col>
-                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 7 ? true : false}>N - Non-structurally damaged, repairable</Button></Col>
-                        </Row>
+                        <InputGroup>
+                            <Form.Select className="border border-black" aria-label="Default select example" value={newDamaged} onChange={(e) => setNewDamaged(e.target.value)}>
+                                <option value="0">Never written off</option>
+                                <option value="1">A - Damage deemed unrepairable, no salvageable parts</option>
+                                <option value="2">B - Damage deemed unrepairable, salvageable parts</option>
+                                <option value="3">C - Damage deemed repairable, cost greater than vehicle value</option>
+                                <option value="4">D - Damage deemed repairable, cost less than vehicle value</option>
+                                <option value="5">VCAR - Cat C/D repaired, DOT inspected</option>
+                                <option value="6">S - Structurally damaged, repairable</option>
+                                <option value="7">N - Non-structurally damaged, repairable</option>
+                            </Form.Select>
+                        </InputGroup>
                     </Col>
                 </Row>
                 <Row className="mb-5">
