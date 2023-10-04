@@ -25,12 +25,13 @@ const VehicleContextProvider = ({ children }) => {
     const [importStatus, setImportStatus] = useState(0);
     const [vkey, setVkey] = useState(true);
     const [nonRunner, setNonRunner] = useState(true);
-    const [motMonth, setMotMonth] = useState(0);
     const [insurance, setInsurance] = useState(0);
     const [privateHire, setPrivateHire] = useState(true);
     const [drivingTuition, setDrivingTuition] = useState(true);
     const [police, setPolice] = useState(true);
     const [seats, setSeats] = useState(true);
+    const [damaged, setDamaged] = useState(0);
+
     const [zone, setZone] = useState(0);
     const [component, setComponent] = useState(0);
     const [fault, setFault] = useState(0);
@@ -49,12 +50,12 @@ const VehicleContextProvider = ({ children }) => {
         newImportStatus,
         newVkey,
         newNonRunner,
-        newMotMonth,
         newInsurance,
         newPrivateHire,
         newDrivingTuition,
         newPolice,
-        newSeats
+        newSeats,
+        newDamaged
     ) => {
         setMileage(newMileage);
         setPreviousOwners(newPreviousOwners);
@@ -63,12 +64,12 @@ const VehicleContextProvider = ({ children }) => {
         setImportStatus(newImportStatus);
         setVkey(newVkey);
         setNonRunner(newNonRunner);
-        setMotMonth(newMotMonth);
         setInsurance(newInsurance);
         setPrivateHire(newPrivateHire);
         setDrivingTuition(newDrivingTuition);
         setPolice(newPolice);
         setSeats(newSeats);
+        setDamaged(newDamaged);
     }
 
     const updateVehicleDamage = (
@@ -160,12 +161,12 @@ const VehicleContextProvider = ({ children }) => {
                 importStatus,
                 vkey,
                 nonRunner,
-                motMonth,
                 insurance,
                 privateHire,
                 drivingTuition,
                 police,
                 seats,
+                damaged,
                 zone,
                 component,
                 fault,

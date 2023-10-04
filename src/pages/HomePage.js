@@ -47,9 +47,9 @@ function HomePage() {
                 <Col sm={12} lg={4} className="mb-4"> 
                   <Card className="rounded rounded-0 text-white bg-transparent border border-0">
                     <Card.Body>
-                      <Card.Title className="d-flex align-items-center"><Image src={TimeBadge} width="42" className="me-3" />Sell your car in under an hour</Card.Title>
+                      <Card.Title className="d-flex align-items-center"><Image src={TimeBadge} width="42" className="me-3" />Sell your car for what it's really worth</Card.Title>
                       <Card.Text className="text-center">
-                        We will buy your car in under an hour, regardless of the make, model, mileage or condition. Start the process by getting a free valuation in less than 30 seconds.
+                        Get a realistic valuation of your car's worth, not an automated price to be chipped down later
                       </Card.Text>
                     </Card.Body>
                   </Card>

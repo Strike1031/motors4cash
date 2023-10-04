@@ -24,12 +24,13 @@ export default function BookPage() {
         importStatus,
         vkey,
         nonRunner,
-        motMonth,
         insurance,
         privateHire,
         drivingTuition,
         police,
         seats,
+        damaged,
+
         zone,
         component,
         fault,
@@ -47,9 +48,27 @@ export default function BookPage() {
     const [newEmail, setNewEmail] = useState("");
     const [newPostCode, setNewPostCode] = useState("");
     const [newPhone, setNewPhone] = useState("");
+    const [notEmail, setNotEmail] = useState(false);
+    const [notPhone, setNotPhone] = useState(false);
+
     const navigate = useNavigate();
+    const emailValidator = (email) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
+    const phoneValidator = (input_str) => {
+        var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+      
+        return re.test(input_str);
+      }
     const submitButton = () => {
+        if (!emailValidator(newEmail)) {
+            setNotEmail(true);
+            return;
+        }
+        if (!phoneValidator(newPhone)) {
+            setNotPhone(true);
+            return;
+        }
         updateLoading(true);
+
         updateUserInfo(newEmail, newPostCode, newPhone);
 
         const postData = {
@@ -67,12 +86,13 @@ export default function BookPage() {
             "import_status": importStatus,
             "v_key": vkey,
             "non_runner": nonRunner,
-            "mot_month": motMonth,
             "insurance": insurance,
             "private_hire": privateHire,
             "driving_tuition": drivingTuition,
             "police": police,
             "seats": seats,
+            "damaged": damaged,
+
             "zone": zone,
             "component": component,
             "fault": fault,
@@ -163,6 +183,7 @@ export default function BookPage() {
                                             value={newEmail}
                                         />
                                     </InputGroup>
+                                    <Form.Label style={{display: `${notEmail?"block":"none"}`, color: "red"}}>Please check this has been entered correctly.</Form.Label>
                                 </div>
 
                                 <div className='text-start mb-3'>
@@ -178,6 +199,7 @@ export default function BookPage() {
                                             value={newPhone}
                                         />
                                     </InputGroup>
+                                    <Form.Label style={{display: `${notPhone?"block":"none"}`, color: "red"}}>Please check this has been entered correctly.</Form.Label>
                                 </div>
                                 {/* <div className='text-start mb-3'>
                                     <Form.Group className="mb-3">

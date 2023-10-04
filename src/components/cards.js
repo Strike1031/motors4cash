@@ -122,7 +122,8 @@ export const FormCard = () => {
                         response.data.data.customDetails.private_hire,
                         response.data.data.customDetails.driving_tuition,
                         response.data.data.customDetails.police,
-                        response.data.data.customDetails.seats
+                        response.data.data.customDetails.seats,
+                        response.data.data.customDetails.damaged
                     );
                     updateVehicleDamage(
                         response.data.data.customDetails.zone,

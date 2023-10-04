@@ -17,12 +17,12 @@ export default function SubDetailPage() {
             importStatus,
             vkey,
             nonRunner,
-            motMonth,
             insurance,
             privateHire,
             drivingTuition,
             police,
             seats,
+            damaged,
             updateAssumptionValues,
         } = useContext(VehicleContext);
 
@@ -33,17 +33,16 @@ export default function SubDetailPage() {
         const [newImportStatus, setNewImportStatus] = useState(importStatus);
         const [newVkey, setNewVkey] = useState(vkey);
         const [newNonRunner, setNewNonRunner] = useState(nonRunner);
-        const [newMotMonth, setNewMotMonth] = useState(motMonth);
         const [newInsurance, setNewInsurance] = useState(insurance);
         const [newPrivateHire, setNewPrivateHire] = useState(privateHire);
         const [newDrivingTuition, setNewDrivingTuition] = useState(drivingTuition);
         const [newPolice, setNewPolice] = useState(police);
         const [newSeats, setNewSeats] = useState(seats);
-
+        const [newDamaged, setNewDamaged] = useState(damaged);
         const navigate =  useNavigate();
 
         const updateAssumption = () => {
-            updateAssumptionValues(newMileage, newPreviousOwners, newServiceHistory, newPersonalRegister, newImportStatus, newVkey, newNonRunner, newMotMonth, newInsurance, newPrivateHire, newDrivingTuition, newPolice, newSeats);
+            updateAssumptionValues(newMileage, newPreviousOwners, newServiceHistory, newPersonalRegister, newImportStatus, newVkey, newNonRunner, newInsurance, newPrivateHire, newDrivingTuition, newPolice, newSeats, newDamaged);
             // toast.success("Success");
             navigate("/book/1");
         }
@@ -136,20 +135,6 @@ export default function SubDetailPage() {
                 </Row>
                 <Row className="mb-3 set-info-group-select">
                     <Col>
-                        <Form.Label>How many months until the vehicle is due its MOT?</Form.Label>
-                        <InputGroup>
-                            <Form.Select className="border border-black" aria-label="Default select example" value={newMotMonth} onChange={(e) => setNewMotMonth(e.target.value)}>
-                                <option value="0">Open this select menu</option>
-                                <option value="1">Less 1 months</option>
-                                <option value="2">1 months</option>
-                                <option value="3">3 + months</option>
-                                <option value="4">6 + months</option>
-                            </Form.Select>
-                        </InputGroup>
-                    </Col>
-                </Row>
-                <Row className="mb-3 set-info-group-select">
-                    <Col>
                         <Form.Label>Has your vehicle ever been subject to an insurance write off or been accident damaged?</Form.Label>
                         <InputGroup>
                             <Form.Select className="border border-black" aria-label="Default select example" value={newInsurance} onChange={(e) => setNewInsurance(e.target.value)}>
@@ -193,6 +178,21 @@ export default function SubDetailPage() {
                         <Row className="mb-3">
                             <Col><Button className="border border-black" onClick={() => setNewSeats(true)} active={newSeats == true ? true : false}>Yes</Button></Col>
                             <Col><Button className="border border-black" onClick={() => setNewSeats(false)} active={newSeats == false ? true : false}>No</Button></Col>
+                        </Row>
+                    </Col>
+                </Row>
+                <Row className="mb-3 set-info-group">
+                    <Col>
+                        <Form.Label htmlFor="basic-url">Has your vehicle ever been subject to an insurance write off or been accident damaged?</Form.Label>
+                        <Row className="mb-3">
+                            <Col><Button className="border border-black" onClick={() => setNewDamaged(true)} active={newDamaged == 0 ? true : false}>Never written off</Button></Col>
+                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 1 ? true : false}>A - Damage deemed unrepairable, no salvageable parts</Button></Col>
+                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 2 ? true : false}>B - Damage deemed unrepairable, salvageable parts</Button></Col>
+                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 3 ? true : false}>C - Damage deemed repairable, cost greater than vehicle value</Button></Col>
+                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 4 ? true : false}>D - Damage deemed repairable, cost less than vehicle value</Button></Col>
+                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 5 ? true : false}>VCAR - Cat C/D repaired, DOT inspected</Button></Col>
+                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 6 ? true : false}>S - Structurally damaged, repairable</Button></Col>
+                            <Col><Button className="border border-black" onClick={() => setNewDamaged(false)} active={newDamaged == 7 ? true : false}>N - Non-structurally damaged, repairable</Button></Col>
                         </Row>
                     </Col>
                 </Row>
