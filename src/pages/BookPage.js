@@ -52,11 +52,13 @@ export default function BookPage() {
     const [notPhone, setNotPhone] = useState(false);
 
     const navigate = useNavigate();
-    const emailValidator = (email) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
+    // const emailValidator = (email) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
+    const emailValidator = (email) => /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/.test(email);
     const phoneValidator = (input_str) => {
-        var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-      
-        return re.test(input_str);
+        // var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+        // https://regex101.com/r/m0ak0K/1
+        const PHONE_REGEX = new RegExp(/"^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"/gmi);
+        return PHONE_REGEX.test(input_str);
       }
     const submitButton = () => {
         if (!emailValidator(newEmail)) {
@@ -213,7 +215,7 @@ export default function BookPage() {
                                     </Form.Group>
                                 </div> */}
                                 <div className='text-center mt-5'>
-                                    <Button className='bg-yellow border border-0 submit-button w-50' onClick={submitButton}>SEE CAR VALUATION</Button>
+                                    <Button className='bg-yellow border border-0 submit-button w-50' onClick={submitButton}>Confirm Booking</Button>
                                 </div>
 
                             </Col>

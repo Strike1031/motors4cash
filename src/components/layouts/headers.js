@@ -38,6 +38,7 @@ export function DefaultHeader() {
                                         <li>{color}</li>
                                         <li>{bodyStyle}</li>
                                         <li>{fuelType}</li>
+                                        <li></li>
                                     </ul>
                                 </div>
                             </Col>

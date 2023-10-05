@@ -110,7 +110,7 @@ const VehicleContextProvider = ({ children }) => {
         newPhone
     ) => {
         setEmail(newEmail);
-        setPostCode(newPostCode);
+        setPostCode(newPostCode);   
         setPhone(newPhone);
     }
 
