@@ -16,7 +16,7 @@ export const WorkflowItemList = [
     {
         image : WorkflowBanner1,
         title : "Free Valuation",
-        subtitle : "Get your instant valuation in seconds."
+        subtitle : "Get a REAL valuation by one of our agents, No automated box standard AI."
     },
     {
         image : WorkflowBanner2,

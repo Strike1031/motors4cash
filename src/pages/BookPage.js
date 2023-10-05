@@ -57,7 +57,10 @@ export default function BookPage() {
     const phoneValidator = (input_str) => {
         // var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
         // https://regex101.com/r/m0ak0K/1
-        const PHONE_REGEX = new RegExp(/"^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"/gmi);
+        // const PHONE_REGEX = new RegExp(/"^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"/gmi);
+        // FOR UK phone numbers;
+        // https://callhippo.com/blog/general/uk-phone-number-format
+        const PHONE_REGEX = new RegExp(/"^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$"/gmi);
         return PHONE_REGEX.test(input_str);
       }
     const submitButton = () => {

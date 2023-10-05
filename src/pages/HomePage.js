@@ -102,7 +102,7 @@ function HomePage() {
               <Row className="py-5 align-items-center">
                 <Col sm={12} lg={6} className="mb-2">
                   <div className="Banner-title pe-2 me-1 pe-lg-5 me-lg-5 text-uppercase text-center text-lg-start">Why Sell you car ?</div>
-                  <div className="Banner-content pe-2 me-1 pe-lg-5 me-lg-5">Whether it’s time for you to upgrade your car or you simply don’t need your vehicle anymore, you will want to know how much your car is worth. Our free car valuation tool provides you with a valuation in under 30 seconds - simply enter your reg plate and a few details about your car for an accurate valuation. </div>
+                  <div className="Banner-content pe-2 me-1 pe-lg-5 me-lg-5">Whether it’s time for you to upgrade your car or you simply don’t need your vehicle anymore, you will want to know how much your car is worth. By choosing us and using our free valuation tool, one of our agents will immediately deep dive into all the details provided and get back to you with a truly honest valuation of your vehicle, simply enter your reg plate and a few details about your car for an accurate valuation. </div>
                 </Col>
                 <Col sm={12} lg={6} className="mb-2">
                   <Image src={IntroBanner} width="100%" />

@@ -57,7 +57,7 @@ export default function SubDetailPage() {
                             <InputGroup.Text>
                                 <Image src={MileageIcon} width="50" className="mx-3" />
                             </InputGroup.Text>
-                            <Form.Control id="basic-url" aria-describedby="basic-addon3" value={newMileage} onChange={(e) => setNewMileage(e.target.value)} />
+                            <Form.Control required id="basic-url" aria-describedby="basic-addon3" value={newMileage} onChange={(e) => setNewMileage(e.target.value)} />
                         </InputGroup>
                     </Col>
                 </Row>
@@ -137,7 +137,7 @@ export default function SubDetailPage() {
                     <Col>
                         <Form.Label>Has your vehicle ever been subject to an insurance write off or been accident damaged?</Form.Label>
                         <InputGroup>
-                            <Form.Select className="border border-black" aria-label="Default select example" value={newInsurance} onChange={(e) => setNewInsurance(e.target.value)}>
+                            <Form.Select required className="border border-black" aria-label="Default select example" value={newInsurance} onChange={(e) => setNewInsurance(e.target.value)}>
                                 <option value="0">Yes</option>
                                 <option value="1">No</option>
                             </Form.Select>
@@ -185,7 +185,7 @@ export default function SubDetailPage() {
                     <Col>
                         <Form.Label htmlFor="basic-url">Has your vehicle ever been subject to an insurance write off or been accident damaged?</Form.Label>
                         <InputGroup>
-                            <Form.Select className="border border-black" aria-label="Default select example" value={newDamaged} onChange={(e) => setNewDamaged(e.target.value)}>
+                            <Form.Select required className="border border-black" aria-label="Default select example" value={newDamaged} onChange={(e) => setNewDamaged(e.target.value)}>
                                 <option value="0">Never written off</option>
                                 <option value="1">A - Damage deemed unrepairable, no salvageable parts</option>
                                 <option value="2">B - Damage deemed unrepairable, salvageable parts</option>
@@ -232,7 +232,7 @@ export default function SubDetailPage() {
                     <Col>
                         <Form.Label>Select Zone</Form.Label>
                         <InputGroup>
-                            <Form.Select className="border border-black" aria-label="Default select example" value={newZone} onChange={(e) => setNewZone(e.target.value)}>
+                            <Form.Select required className="border border-black" aria-label="Default select example" value={newZone} onChange={(e) => setNewZone(e.target.value)}>
                                 <option value="0">Select Zone...</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -246,7 +246,7 @@ export default function SubDetailPage() {
                     <Col>
                         <Form.Label>Select Component</Form.Label>
                         <InputGroup>
-                            <Form.Select className="border border-black" aria-label="Default select example" value={newComponent} onChange={(e) => setNewComponent(e.target.value)}>
+                            <Form.Select required className="border border-black" aria-label="Default select example" value={newComponent} onChange={(e) => setNewComponent(e.target.value)}>
                                 <option value="0">Select Component...</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -260,7 +260,7 @@ export default function SubDetailPage() {
                     <Col>
                         <Form.Label>Select Fault</Form.Label>
                         <InputGroup>
-                            <Form.Select className="border border-black" aria-label="Default select example" value={newFault} onChange={(e) => setNewFault(e.target.value)}>
+                            <Form.Select required className="border border-black" aria-label="Default select example" value={newFault} onChange={(e) => setNewFault(e.target.value)}>
                                 <option value="0">Select Fault...</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
