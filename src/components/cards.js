@@ -26,7 +26,7 @@ export const AdminLoginCard = () => {
                 // Handle the successful response here
                 if (response.data.status == true) {
                     updateLoading(false);
-                    toast.success(response.data.message);
+                    // toast.success(response.data.message);
                     updateAdminInfo(name, password);
                     navigate(`/admin/table`);
                 }
@@ -55,7 +55,7 @@ export const AdminLoginCard = () => {
                         />
                     </InputGroup>
                 </Form.Group>
-                <Form.Group className="mb-3 text-start" controlId="exampleForm.ControlInput1">
+                <Form.Group className="mb-3 text-start" controlId="exampleForm.ControlInput2">
                     <Form.Label>Password</Form.Label>
                     <InputGroup className="mb-3">
                         <InputGroup.Text id="basic-addon1"><Image src={EditIcon} width="25" /></InputGroup.Text>
@@ -157,7 +157,7 @@ export const FormCard = () => {
                         />
                     </InputGroup>
                 </Form.Group>
-                <Form.Group className="mb-3 text-start" controlId="exampleForm.ControlInput1">
+                <Form.Group className="mb-3 text-start" controlId="exampleForm.ControlInput2">
                     <Form.Label>MILEAGE</Form.Label>
                     <InputGroup className="mb-3">
                         <InputGroup.Text id="basic-addon1"><Image src={EditIcon} width="25" /></InputGroup.Text>

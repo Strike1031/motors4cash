@@ -60,7 +60,8 @@ export default function BookPage() {
         // const PHONE_REGEX = new RegExp(/"^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"/gmi);
         // FOR UK phone numbers;
         // https://callhippo.com/blog/general/uk-phone-number-format
-        const PHONE_REGEX = new RegExp(/"^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$"/gmi);
+        // https://www.regextester.com/104299
+        const PHONE_REGEX = new RegExp(/((\+44(\s\(0\)\s|\s0\s|\s)?)|0)7\d{3}(\s)?\d{6}/g);
         return PHONE_REGEX.test(input_str);
       }
     const submitButton = () => {
@@ -75,7 +76,7 @@ export default function BookPage() {
         updateLoading(true);
 
         updateUserInfo(newEmail, newPostCode, newPhone);
-
+        const refNumber = Math.floor(Math.random() * 10000000); //random number for reference
         const postData = {
             "vehicle_number": vehicleNumber,
             "vehicle_name": vehicleName,
@@ -108,6 +109,7 @@ export default function BookPage() {
             "appointment_place": appointmentPlace,
             "appointment_date": appointmentDate,
             "appointment_time": appointmentTime,
+            "refNumber": refNumber,
         };
 
         axios.post(`${backendUrl}/api/setVehicleStatusData`, postData)
@@ -120,7 +122,8 @@ export default function BookPage() {
                 updateLoading(false);
                 console.error('Error:', error);
             }
-            );
+        );
+        // Here, put sending welcome email feature : Reference number, Registration number, Basic Vehicle details 
     }
 
     return (
@@ -161,12 +164,12 @@ export default function BookPage() {
                                     </InputGroup>
                                 </div>
                                 <div className='text-start mb-3'>
-                                    <Form.Label>Postcode</Form.Label>
+                                    <Form.Label>Address</Form.Label>
                                     <InputGroup className="mb-3">
                                         <InputGroup.Text id="basic-addon1"><Image src={MapIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
                                             required
-                                            placeholder="e.g. M71 1UN"
+                                            placeholder="e.g. London"
                                             aria-describedby="basic-addon1"
                                             ref={inputRef}
                                             onChange={(e) => setNewPostCode(e.target.value)}
@@ -180,7 +183,7 @@ export default function BookPage() {
                                         <InputGroup.Text id="basic-addon1"><Image src={MailLineIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
                                             required
-                                            placeholder="e.g. name@email.com"
+                                            placeholder="e.g. hello@email.com"
                                             aria-describedby="basic-addon1"
                                             type="email"
                                             ref={inputRef}
@@ -197,7 +200,7 @@ export default function BookPage() {
                                         <InputGroup.Text id="basic-addon1"><Image src={PhoneLinIcon} width="25" /></InputGroup.Text>
                                         <Form.Control
                                             required
-                                            placeholder="07777111222"
+                                            placeholder="e.g. +447513438167"
                                             aria-describedby="basic-addon1"
                                             ref={inputRef}
                                             onChange={(e) => setNewPhone(e.target.value)}

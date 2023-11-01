@@ -18,7 +18,7 @@ export function DefaultHeader() {
                         <Nav className="ms-auto">
                             <NavLink to="/" className="nav-link text-uppercase">Car Valuation</NavLink>
                             <Nav.Link href="/#Faqsection" className="nav-link text-uppercase">FAQs</Nav.Link>
-                            <NavLink to="/appointment" className="nav-link text-uppercase">Manage Appointment</NavLink>
+                            <NavLink to="/before" className="nav-link text-uppercase">Manage Appointment</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

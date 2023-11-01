@@ -4,12 +4,14 @@ import HomePage from './pages/HomePage';
 import { AdminLayout, MainLayout } from './components/layouts/layout';
 import FaqPage from './pages/FaqPage';
 import AppointmentPage from './pages/AppointmentPage';
+import NewAppointmentPage from './pages/NewAppointmentPage';
 import DetailPage from './pages/DetailPage';
 import SubDetailPage from './pages/SubdetailPage';
 import { AppointmentDetailPage } from './pages/AppointmentDetailPage';
 import VehicleContextProvider from './context/context';
 import BookPage from './pages/BookPage';
 import ContactPage from './pages/ContactPage';
+import BeforePage from './pages/BeforePage';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer} from 'react-toastify';
 import AdminLogin from './pages/AdminLogin';
@@ -25,8 +27,11 @@ function App() {
             <Route element={<MainLayout />}>
               <Route path='/' element={<HomePage />} />
               <Route path='/faq' element={<FaqPage />} />
-              <Route path='/appointment' element={<AppointmentPage />} />
-              <Route path='/appointment/:id' element={<AppointmentDetailPage />} />
+               {/* Before appointment page, input reference number */}
+              <Route path="/before" element={<BeforePage/>}/> 
+              <Route path='/appointment/:ref_number' element={<NewAppointmentPage />} />
+              {/* <Route path='/appointment' element={<AppointmentPage />} />
+              <Route path='/appointment/:id' element={<AppointmentDetailPage />} /> */}
               <Route path='/detail/:id' element={<DetailPage />} />
               <Route path='/detail/:id/subdetail' element={<SubDetailPage />} />
               <Route path="/book/:id" element={<BookPage/>}/>
