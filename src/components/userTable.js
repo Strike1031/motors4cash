@@ -88,7 +88,7 @@ export const UserTable = (props) => {
                     <Container>
                         <Row>
                             <Col>
-                                <Form>
+                                <Form style={{height: "400px", overflow: "scroll"}}>
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_1">
                                         <Form.Label>Registration Name</Form.Label>
                                         <Form.Control
@@ -98,7 +98,7 @@ export const UserTable = (props) => {
                                             readOnly
                                         />
                                     </Form.Group>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_1">
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_2">
                                         <Form.Label>Year of Manufacture</Form.Label>
                                         <Form.Control
                                             type="text"
@@ -107,7 +107,7 @@ export const UserTable = (props) => {
                                             readOnly
                                         />
                                     </Form.Group>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_1">
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_3">
                                         <Form.Label>Mileage</Form.Label>
                                         <Form.Control
                                             type="text"
@@ -116,7 +116,7 @@ export const UserTable = (props) => {
                                             readOnly
                                         />
                                     </Form.Group>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_1">
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_4">
                                         <Form.Label>Color</Form.Label>
                                         <Form.Control
                                             type="text"
@@ -125,7 +125,7 @@ export const UserTable = (props) => {
                                             readOnly
                                         />
                                     </Form.Group>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_1">
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_5">
                                         <Form.Label>BodyStyle</Form.Label>
                                         <Form.Control
                                             type="text"
@@ -134,11 +134,128 @@ export const UserTable = (props) => {
                                             readOnly
                                         />
                                     </Form.Group>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_1">
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_6">
                                         <Form.Label>FuelType</Form.Label>
                                         <Form.Control
                                             type="text"
                                             defaultValue={currentValue['fuelType']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_7">
+                                        <Form.Label>Previous Owners</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['previous_owners']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_8">
+                                        <Form.Label>Service history</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['service_history']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_9">
+                                        <Form.Label>Service history</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['service_history']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_10">
+                                        <Form.Label>Personal Register</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['personal_register']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_11">
+                                        <Form.Label>Car Import</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['import_status']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_12">
+                                        <Form.Label>Sets of Keys</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['v_key']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_13">
+                                        <Form.Label>Non Runner</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['non_runner']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_14">
+                                        <Form.Label>Insurance write off</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['insurance']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_15">
+                                        <Form.Label>Private hire</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['private_hire']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_16">
+                                        <Form.Label>Driving Tuition</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['driving_tuition']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_17">
+                                        <Form.Label>Police/Emergency</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['police']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_18">
+                                        <Form.Label>Modified winch</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['seats']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Insurance write off</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['damaged']}
                                             disabled
                                             readOnly
                                         />
