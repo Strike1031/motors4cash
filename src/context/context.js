@@ -32,16 +32,64 @@ const VehicleContextProvider = ({ children }) => {
     const [seats, setSeats] = useState(true);
     const [damaged, setDamaged] = useState(0);
 
-    const [zone, setZone] = useState(0);
-    const [component, setComponent] = useState(0);
-    const [fault, setFault] = useState(0);
     const [email, setEmail] = useState("");
     const [postCode, setPostCode] = useState("");
     const [phone, setPhone] = useState("");
     const [appointmentPlace, setAppointmentPlace] = useState("");
     const [appointmentDate, setAppointmentDate] = useState("");
     const [appointmentTime, setAppointmentTime] = useState("");
+    ////////
+    //mine:
+    const [BodyWork, setBodyWork] = useState(0);
+    const [PanelDamageCount, setPanelDamageCount] = useState(1);
+    //
+    const [WindScreen, setWindScreen] = useState(0);
+    const [CrackedDriverSide, setCrackedDriverSide] = useState(false);
+    const [CrackedPassengerSide, setCrackedPassengerSide] = useState(false);
+    const [CrackedRearWindow, setCrackedRearWindow] = useState(false);
+    const [Large5pCoin, setLarge5pCoin] = useState(true);
+    //
+    const [DashWarningLight, setDashWarningLight] = useState(0);
+    const [DashMaxMiles, setDashMaxMiles] = useState(70000);
 
+    const [ServiceDue, setServiceDue] = useState(false);
+    const [OilWarning, setOilWarning] = useState(false);
+    const [EngineManagement, setEngineManagement] = useState(false);
+    const [AirbagWarning, setAirbagWarning] = useState(false);
+    const [ABS, setABS] = useState(false);
+
+    //
+    const [Wheels, setWheels] = useState(0);
+    const [AlloyScuffed, setAlloyScuffed] = useState(0);
+    const [TyreTradeLimit, setTyreTradeLimit] = useState(0);
+
+    //
+    const [Mirrors, setMirrors] = useState(0);
+    const [MirrorFaulty, setMirrorFaulty] = useState(false);
+    const [MirrorGlass, setMirrorGlass] = useState(0);
+    const [MirrorCover, setMirrorCover] = useState(0);
+
+    //
+    const [Interior, setInterior] = useState(0);
+    const [HasStains, setHasStains] = useState(false);
+    const [HasTears, setHasTears] = useState(false);
+    const [HasBurns, setHasBurns] = useState(false);
+    // Wrap up
+    const [WrapPrivatePlate, setWrapPrivatePlate] = useState(false);
+    const [WrapTwoKeys, setWrapTwoKeys] = useState(false);
+    const [WrapOverMOT, setWrapOverMOT] = useState(false);
+    const [WrapLogbook, setWrapLogbook] = useState(false);
+    const [WrapSC, setWrapSC] = useState(false);
+    const [WrapMissingPart, setWrapMissingPart] = useState(false);
+    const [WrapFaultyElectrics, setWrapFaultyElectrics] = useState(false);
+    const [WrapMechanicalIssues, setWrapMechanicalIssues] = useState(false);
+    const [WrapNoModification, setWrapNoModification] = useState(false);
+    const [WrapNoMileageAlteration, setWrapNoMileageAlteration] = useState(false);
+    const [WrapIsNotImported, setWrapIsNotImported] = useState(false);
+    const [WrapRightHandDrive, setWrapRightHandDrive] = useState(false);
+    const [WrapExDriveSchool, setWrapExDriveSchool] = useState(false);
+    const [WrapTaxi, setWrapTaxi] = useState(false);
+    ///////
     const updateAssumptionValues = (
         newMileage,
         newPreviousOwners,
@@ -73,13 +121,61 @@ const VehicleContextProvider = ({ children }) => {
     }
 
     const updateVehicleDamage = (
-        newZone,
-        newComponent,
-        newFault
+        newBodyWork, newPanelDamageCount, newWindScreen, newCrackedDriverSide, newCrackedPassengerSide, newCrackedRearWindow, newLarge5pCoin, newDashWarningLight, newDashMaxMiles, newServiceDue, newOilWarning, newEngineManagement, newAirbagWarning, newABS, newWheels, newAlloyScuffed, newTyreTradeLimit, newMirrors, newMirrorFaulty, newMirrorGlass, newMirrorCover, newInterior, newHasStains, newHasTears, newHasBurns, 
+        newWrapPrivatePlate,
+        newWrapTwoKeys,
+        newWrapOverMOT,
+        newWrapLogbook,
+        newWrapSC,
+        newWrapMissingPart,
+        newWrapFaultyElectrics,
+        newWrapMechanicalIssues,
+        newWrapNoModification,
+        newWrapNoMileageAlteration,
+        newWrapIsNotImported,
+        newWrapRightHandDrive,
+        newWrapExDriveSchool,
+        newWrapTaxi
     ) => {
-        setZone(newZone);
-        setComponent(newComponent);
-        setFault(newFault);
+        setBodyWork(newBodyWork);
+        setPanelDamageCount(newPanelDamageCount);
+        setWindScreen(newWindScreen);
+        setCrackedDriverSide(newCrackedDriverSide);
+        setCrackedPassengerSide(newCrackedPassengerSide);
+        setCrackedRearWindow(newCrackedRearWindow);
+        setLarge5pCoin(newLarge5pCoin);
+        setDashWarningLight(newDashWarningLight);
+        setDashMaxMiles(newDashMaxMiles);
+        setServiceDue(newServiceDue);
+        setOilWarning(newOilWarning); 
+        setEngineManagement(newEngineManagement);
+        setAirbagWarning(newAirbagWarning); 
+        setABS(newABS);
+        setWheels(newWheels); 
+        setAlloyScuffed(newAlloyScuffed); 
+        setTyreTradeLimit(newTyreTradeLimit); 
+        setMirrors(newMirrors); 
+        setMirrorFaulty(newMirrorFaulty); 
+        setMirrorGlass(newMirrorGlass); 
+        setMirrorCover(newMirrorCover); 
+        setInterior(newInterior); 
+        setHasStains(newHasStains);
+        setHasTears(newHasTears); 
+        setHasBurns(newHasBurns);
+        setWrapPrivatePlate(newWrapPrivatePlate);
+        setWrapTwoKeys(newWrapTwoKeys);
+        setWrapOverMOT(newWrapOverMOT);
+        setWrapLogbook(newWrapLogbook);
+        setWrapSC(newWrapSC);
+        setWrapMissingPart(newWrapMissingPart);
+        setWrapFaultyElectrics(newWrapFaultyElectrics);
+        setWrapMechanicalIssues(newWrapMechanicalIssues);
+        setWrapNoModification(newWrapNoModification);
+        setWrapNoMileageAlteration(newWrapNoMileageAlteration);
+        setWrapIsNotImported(newWrapIsNotImported);
+        setWrapRightHandDrive(newWrapRightHandDrive);
+        setWrapExDriveSchool(newWrapExDriveSchool);
+        setWrapTaxi(newWrapTaxi);
     }
 
     const updateVehicle = (
@@ -167,9 +263,47 @@ const VehicleContextProvider = ({ children }) => {
                 police,
                 seats,
                 damaged,
-                zone,
-                component,
-                fault,
+                //
+                BodyWork, 
+                PanelDamageCount, 
+                WindScreen, 
+                CrackedDriverSide,
+                CrackedPassengerSide, 
+                CrackedRearWindow, 
+                Large5pCoin, 
+                DashWarningLight, 
+                DashMaxMiles, 
+                ServiceDue, 
+                OilWarning, 
+                EngineManagement, 
+                AirbagWarning, 
+                ABS, 
+                Wheels, 
+                AlloyScuffed, 
+                TyreTradeLimit, 
+                Mirrors, 
+                MirrorFaulty, 
+                MirrorGlass, 
+                MirrorCover, 
+                Interior, 
+                HasStains, 
+                HasTears, 
+                HasBurns, 
+                WrapPrivatePlate,
+                WrapTwoKeys,
+                WrapOverMOT,
+                WrapLogbook,
+                WrapSC,
+                WrapMissingPart,
+                WrapFaultyElectrics,
+                WrapMechanicalIssues,
+                WrapNoModification,
+                WrapNoMileageAlteration,
+                WrapIsNotImported,
+                WrapRightHandDrive,
+                WrapExDriveSchool,
+                WrapTaxi,
+                //
                 email,
                 postCode,
                 phone,

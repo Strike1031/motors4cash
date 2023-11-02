@@ -30,11 +30,11 @@ export default function BookPage() {
         police,
         seats,
         damaged,
-
+        //
         zone,
         component,
         fault,
-
+        //
         appointmentPlace,
         appointmentDate,
         appointmentTime,

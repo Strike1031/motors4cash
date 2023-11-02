@@ -815,3 +815,9 @@
 button[role="tab"] {
     font-size: 28px;
 }
+
+.nextButton {
+    background-color: #ffc000 !important;
+    color: black !important;
+    font-weight: bold !important;
+}
