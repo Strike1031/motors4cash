@@ -39,7 +39,6 @@ const VehicleContextProvider = ({ children }) => {
     const [appointmentDate, setAppointmentDate] = useState("");
     const [appointmentTime, setAppointmentTime] = useState("");
     ////////
-    //mine:
     const [BodyWork, setBodyWork] = useState(0);
     const [PanelDamageCount, setPanelDamageCount] = useState(1);
     const [DamageTypes, setDamageTypes] = useState([0]); // array damamge of selectbox 

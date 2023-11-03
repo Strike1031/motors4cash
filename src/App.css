@@ -821,3 +821,14 @@ button[role="tab"] {
     color: black !important;
     font-weight: bold !important;
 }
+
+
+button[aria-selected="true"].step-trigger {
+    color: #007bff !important;
+}
+
+button[aria-selected="true"].step-trigger .bs-stepper-circle {
+    background-color: #007bff !important;
+    color: white !important;
+}
+

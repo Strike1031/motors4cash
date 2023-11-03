@@ -260,7 +260,6 @@ export const UserTable = (props) => {
                                             readOnly
                                         />
                                     </Form.Group>
-                                    //////////////////
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
                                         <Form.Label>Is there any damage to the paint or bodywork?</Form.Label>
                                         <Form.Control
