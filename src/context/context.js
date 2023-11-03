@@ -42,6 +42,7 @@ const VehicleContextProvider = ({ children }) => {
     //mine:
     const [BodyWork, setBodyWork] = useState(0);
     const [PanelDamageCount, setPanelDamageCount] = useState(1);
+    const [DamageTypes, setDamageTypes] = useState([0]); // array damamge of selectbox 
     //
     const [WindScreen, setWindScreen] = useState(0);
     const [CrackedDriverSide, setCrackedDriverSide] = useState(false);
@@ -121,7 +122,7 @@ const VehicleContextProvider = ({ children }) => {
     }
 
     const updateVehicleDamage = (
-        newBodyWork, newPanelDamageCount, newWindScreen, newCrackedDriverSide, newCrackedPassengerSide, newCrackedRearWindow, newLarge5pCoin, newDashWarningLight, newDashMaxMiles, newServiceDue, newOilWarning, newEngineManagement, newAirbagWarning, newABS, newWheels, newAlloyScuffed, newTyreTradeLimit, newMirrors, newMirrorFaulty, newMirrorGlass, newMirrorCover, newInterior, newHasStains, newHasTears, newHasBurns, 
+        newBodyWork, newPanelDamageCount, newDamageTypes, newWindScreen, newCrackedDriverSide, newCrackedPassengerSide, newCrackedRearWindow, newLarge5pCoin, newDashWarningLight, newDashMaxMiles, newServiceDue, newOilWarning, newEngineManagement, newAirbagWarning, newABS, newWheels, newAlloyScuffed, newTyreTradeLimit, newMirrors, newMirrorFaulty, newMirrorGlass, newMirrorCover, newInterior, newHasStains, newHasTears, newHasBurns, 
         newWrapPrivatePlate,
         newWrapTwoKeys,
         newWrapOverMOT,
@@ -139,6 +140,7 @@ const VehicleContextProvider = ({ children }) => {
     ) => {
         setBodyWork(newBodyWork);
         setPanelDamageCount(newPanelDamageCount);
+        setDamageTypes(newDamageTypes);
         setWindScreen(newWindScreen);
         setCrackedDriverSide(newCrackedDriverSide);
         setCrackedPassengerSide(newCrackedPassengerSide);
@@ -265,7 +267,8 @@ const VehicleContextProvider = ({ children }) => {
                 damaged,
                 //
                 BodyWork, 
-                PanelDamageCount, 
+                PanelDamageCount,
+                DamageTypes, 
                 WindScreen, 
                 CrackedDriverSide,
                 CrackedPassengerSide, 

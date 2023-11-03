@@ -260,6 +260,368 @@ export const UserTable = (props) => {
                                             readOnly
                                         />
                                     </Form.Group>
+                                    //////////////////
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Is there any damage to the paint or bodywork?</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['BodyWork']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>How many panels are damaged?</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['PanelDamageCount']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Largest Damages(1: Stone Chips, 2: Small scratch, 3: Scratch, 4:Small dent, 5: Large dent - below door
+                                            , 6: Large dent - roof, 7: Large dent - other, 8: Cracked or insecure bumper, 9: Rust, 10: Previous poor repair)</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['DamageTypes']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Is there any windscreen or rear window damage?</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WindScreen']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Chipped or Cracked driver side</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['CrackedDriverSide']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Chipped or cracked passenger side</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['CrackedPassengerSide']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Cracked or chipped rear window</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['CrackedRearWindow']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Is it large than a 5p coin?</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['Large5pCoin']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Are any of the following warning lights on?</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['DashWarningLight']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Dash Max Mileage</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['DashMaxMiles']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Service Due</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['ServiceDue']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Oil Warning</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['OilWarning']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Engine Management</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['EngineManagement']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Airbag Warning</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['AirbagWarning']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>ABS</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['ABS']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Any damage to your allow wheels, wheel trims or tyres?</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['Wheels']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>How many alloys are scuffed?</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['AlloyScuffed']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>How many tyres are below the 1.6mm tyre tread limit and need replacing?</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['TyreTradeLimit']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Are there any problems with mirrors?</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['Mirrors']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Mirror Electronics Faulty</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['MirrorFaulty']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Mirror Glass (0: One scratched or missing, 1: Both scratched or missing)</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['MirrorGlass']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Mirror Cover (0: One scratched or missing, 1: Both scratched or missing)</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['MirrorCover']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Any seat, carpet or upholstery damage?</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['Interior']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Has Stains</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['HasStains']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Has Tears</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['HasTears']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Has Burns</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['HasBurns']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>I don't have a private plate to keep</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapPrivatePlate']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>This car comes with two keys</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapTwoKeys']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Has over 3 months MOT</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapOverMOT']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Has V5C logbook</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapLogbook']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Is not a category S/C or N/D</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapSC']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>No missing parts</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapMissingPart']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>No faulty electrics</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapFaultyElectrics']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>No mechanical issues</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapMechanicalIssues']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>No modifications</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapNoModification']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>No mileage alterations</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapNoMileageAlteration']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>is not imported</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapIsNotImported']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>is right-hand drive</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapRightHandDrive']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Not ex-driving school</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapExDriveSchool']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput2_19">
+                                        <Form.Label>Has not been used for Taxi/Private hire</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            defaultValue={currentValue['WrapTaxi']}
+                                            disabled
+                                            readOnly
+                                        />
+                                    </Form.Group>
                                 </Form>
                             </Col>
                             <Col>

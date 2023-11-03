@@ -225,6 +225,7 @@ export default function SubDetailPage() {
         //mine:
         const [newBodyWork, setNewBodyWork] = useState(0);
         const [newPanelDamageCount, setNewPanelDamageCount] = useState(1);
+        const [newDamageTypes, setNewDamageTypes] = useState([0]);  //Save array damamge of selectbox 
         //
         const [newWindScreen, setNewWindScreen] = useState(0);
         const [newCrackedDriverSide, setNewCrackedDriverSide] = useState(false);
@@ -285,15 +286,32 @@ export default function SubDetailPage() {
             });
         }, []);
         //
+        const addPanelDamage = (count) => {
+            setNewDamageTypes([...newDamageTypes, 0]);
+            setNewPanelDamageCount(count+1);
+        }
+
+        const setEachDamageType = (index, value) => {
+            const updateDamageTypes = [...newDamageTypes];
+            updateDamageTypes[index] = value;
+            setNewDamageTypes(updateDamageTypes);
+        }
+
+        const removePanelDamage = (count) => {
+            if (count > 1)
+            {
+                const updateDamageTypes = [...newDamageTypes];
+                updateDamageTypes.splice(count-1, 1);
+                setNewDamageTypes(updateDamageTypes);
+                setNewPanelDamageCount(count-1);
+            }                
+        }
         const showPanelDamage = (count) => {
-            console.log("showPanelDamage");
             setNewPanelDamageCount(count);
         }
         //
-
         const updateDamage = () => {
-            console.log('updateDamage');
-            updateVehicleDamage(newBodyWork, newPanelDamageCount, newWindScreen, newCrackedDriverSide, newCrackedPassengerSide, newCrackedRearWindow, newLarge5pCoin, newDashWarningLight, newDashMaxMiles, newServiceDue, newOilWarning, newEngineManagement, newAirbagWarning, newABS, newWheels, newAlloyScuffed, newTyreTradeLimit, newMirrors, newMirrorFaulty, newMirrorGlass, newMirrorCover, newInterior, newHasStains, newHasTears, newHasBurns, 
+            updateVehicleDamage(newBodyWork, newPanelDamageCount, newDamageTypes, newWindScreen, newCrackedDriverSide, newCrackedPassengerSide, newCrackedRearWindow, newLarge5pCoin, newDashWarningLight, newDashMaxMiles, newServiceDue, newOilWarning, newEngineManagement, newAirbagWarning, newABS, newWheels, newAlloyScuffed, newTyreTradeLimit, newMirrors, newMirrorFaulty, newMirrorGlass, newMirrorCover, newInterior, newHasStains, newHasTears, newHasBurns, 
                 newWrapPrivatePlate,
                 newWrapTwoKeys,
                 newWrapOverMOT,
@@ -364,7 +382,7 @@ export default function SubDetailPage() {
                                 <Col lg={3}></Col>
                                 <Col lg={6}>
                                     <div id="test-l-1" className="content">
-                                        <div>
+                                        {/* <div>
                                             <Row>
                                                 <Col md={8} className="mx-auto">
                                                     <Form.Label><h2>Is there any damage to the paint or bodywork?</h2></Form.Label>
@@ -401,8 +419,8 @@ export default function SubDetailPage() {
                                                     <div style={{marginBottom: "20px"}}></div>
                                                 </Col>
                                             </Row>
-                                        </div>
-                                        {/* <div>
+                                        </div> */}
+                                        <div>
                                             <Row>
                                                 <Col md={8} className="mx-auto">
                                                     <Form.Label><h2>How many panels are damaged?</h2></Form.Label>
@@ -410,7 +428,7 @@ export default function SubDetailPage() {
                                                     <Form.Label>Panels include; doors, door pillars(between doors), roof, bannet, bumpers etc.</Form.Label>
                                                     <br />
                                                     <InputGroup className="mb-3">
-                                                        <Button variant="outline-secondary" id="panel_sub" onClick={() => showPanelDamage(newPanelDamageCount - 1 < 1 ? 1 : newPanelDamageCount - 1)}>
+                                                        <Button variant="outline-secondary" id="panel_sub" onClick={() => removePanelDamage(newPanelDamageCount)}>
                                                             -
                                                         </Button>
                                                         <Form.Control
@@ -421,15 +439,34 @@ export default function SubDetailPage() {
                                                             value={newPanelDamageCount}
                                                             onChange={(evt) => { showPanelDamage(evt.target.value < 1 ? 1 : evt.target.value) }}
                                                         />
-                                                        <Button variant="outline-secondary" id="panel_add" onClick={() => showPanelDamage(newPanelDamageCount + 1)}>
+                                                        <Button variant="outline-secondary" id="panel_add" onClick={() => addPanelDamage(newPanelDamageCount)}>
                                                             +
                                                         </Button>
                                                     </InputGroup>
                                                     <Form.Label>Type of damage</Form.Label>
                                                      <div style={{marginBottom: "20px"}}></div>
+                                                     {newDamageTypes.length > 0 && newDamageTypes.map((damageType, index) => 
+                                                        <div key={index}>
+                                                            <Form.Label>Largest damage of panel {index+1}</Form.Label>
+                                                            <Form.Select aria-label="Default select example" value={damageType} onChange={e => setEachDamageType(index, e.target.value)}>
+                                                                <option>Select damage</option>
+                                                                <option value="1">Stone chips(more than 5)</option>
+                                                                <option value="2">Small scratch or dent(less than 3cm)</option>
+                                                                <option value="3">Scratch - long</option>
+                                                                <option value="4">Small dent (between 3 and 30cm)</option>
+                                                                <option value="5">Large dent - below door (sill)</option>
+                                                                <option value="6">Large dent - roof</option>
+                                                                <option value="7">Large dent - other</option>
+                                                                <option value="8">Cracked or insecure bumper</option>
+                                                                <option value="9">Rust</option>
+                                                                <option value="10">Previous poor repair</option>
+                                                            </Form.Select>
+                                                        </div>
+                                                     )}
                                                 </Col>
                                             </Row>
-                                        </div> */}
+                                            <div style={{marginBottom: "10px"}}></div>
+                                        </div>
                                         <Row>
                                             <Col md={8} className="mx-auto">
                                                 <button
